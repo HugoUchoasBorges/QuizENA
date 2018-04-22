@@ -80,10 +80,14 @@
         <object-type name="text_feedback_resposta" sid="172142645730916">
             <plugin id="Text" />
         </object-type>
+        <object-type name="text_alternativa4" sid="749788994523252">
+            <plugin id="Text" />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
         <layout>Jogo.xml</layout>
+        <layout>GameOver.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>main_events.xml</event-sheet>

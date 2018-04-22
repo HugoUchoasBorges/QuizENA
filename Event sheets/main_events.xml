@@ -184,11 +184,42 @@
                         <action id="-15" name="Set visible" sid="783541869348443" type="text_feedback_resposta">
                             <param id="0" name="Visibility">0</param>
                         </action>
-                        <action id="0" name="Call function" sid="454182017079336" type="Function">
-                            <param id="0" name="Name">&quot;pegaQuestaoAleatoria&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
+                        <action id="9" name="Delete" sid="807830340817421" type="Array">
+                            <param id="0" name="Index">number_valor_aleatorio</param>
+                            <param id="1" name="Axis">0</param>
+                        </action>
+                        <action id="-11" name="Subtract from" sid="601723637186310" type="System">
+                            <param id="0" name="Variable">number_quantidade_questoes</param>
+                            <param id="1" name="Value">1</param>
                         </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="271725204835654">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="526177916271258" type="System">
+                                    <param id="0" name="Variable">number_quantidade_questoes</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="454182017079336" type="Function">
+                                    <param id="0" name="Name">&quot;pegaQuestaoAleatoria&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="844584239150194">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="688051386418374" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Go to layout" sid="756922874838228" type="System">
+                                    <param id="0" name="Layout">GameOver</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-block>
