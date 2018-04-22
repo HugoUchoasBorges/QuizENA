@@ -1,0 +1,17 @@
+Qual o primeiro nome do Vantuil?;
+José;
+Francisco;
+Antônio;
+José;
+|
+Qual desses não é apelido de um professor da Unifei?;
+Jesus;
+Cachaça;
+Claudemônio;
+Jesus;
+|
+Qual o professor que tem um projeto de máquina do tempo?;
+Kláudia;
+Klippert;
+Kashimoto;
+Klippert;

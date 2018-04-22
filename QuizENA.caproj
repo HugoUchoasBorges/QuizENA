@@ -10,7 +10,11 @@
     <unique-id>7kqipd2bdzw6</unique-id>
     <saved-with-version>25500</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="AJAX" version="1">AJAX</plugin>
+        <plugin author="Scirra" id="Arr" version="1">Array</plugin>
+        <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
     </used-plugins>
     <used-behaviors />
     <used-effects />
@@ -61,6 +65,21 @@
         <object-type name="text_alternativa3" sid="882723256869688">
             <plugin id="Text" />
         </object-type>
+        <object-type name="Touch" sid="590610570236070">
+            <plugin id="Touch" />
+        </object-type>
+        <object-type global="1" name="Array" sid="382523688082840">
+            <plugin id="Arr" />
+        </object-type>
+        <object-type name="Function" sid="495010570290640">
+            <plugin id="Function" />
+        </object-type>
+        <object-type name="AJAX" sid="997526206029183">
+            <plugin id="AJAX" />
+        </object-type>
+        <object-type name="text_feedback_resposta" sid="172142645730916">
+            <plugin id="Text" />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
@@ -69,7 +88,15 @@
     <event-folder>
         <event-sheet>main_events.xml</event-sheet>
     </event-folder>
-    <global-instances />
+    <global-instances>
+        <global-instance type="Touch" uid="7">
+            <properties>
+                <use-mouse-input>Yes</use-mouse-input>
+            </properties>
+        </global-instance>
+        <global-instance type="Function" uid="9" />
+        <global-instance type="AJAX" uid="10" />
+    </global-instances>
     <sounds-folder />
     <music-folder />
     <files-folder>
@@ -80,7 +107,7 @@
             <file name="icon-128.png" />
             <file name="icon-256.png" />
             <file name="loading-logo.png" />
-            <file name="Questions.txt" />
         </file-folder>
+        <file name="Perguntas.txt" />
     </files-folder>
 </c2project>

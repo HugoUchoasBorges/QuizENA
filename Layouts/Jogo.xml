@@ -153,10 +153,10 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>95</x>
-                        <y>374</y>
+                        <y>339</y>
                         <z>0</z>
-                        <width>181</width>
-                        <height>69</height>
+                        <width>1174</width>
+                        <height>103</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
@@ -180,10 +180,10 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>95</x>
-                        <y>469</y>
+                        <y>438</y>
                         <z>0</z>
-                        <width>181</width>
-                        <height>69</height>
+                        <width>1178</width>
+                        <height>103</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
@@ -207,9 +207,36 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>95</x>
-                        <y>563</y>
+                        <y>537</y>
                         <z>0</z>
-                        <width>181</width>
+                        <width>1184</width>
+                        <height>103</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="text_feedback_resposta" uid="11">
+                    <properties>
+                        <text>correto</text>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <font>Arial Rounded MT Bold,-47,400,0</font>
+                        <color>0,0,0</color>
+                        <horizontal-alignment>Left</horizontal-alignment>
+                        <vertical-alignment>Top</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>534</x>
+                        <y>645</y>
+                        <z>0</z>
+                        <width>234</width>
                         <height>69</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
@@ -222,6 +249,14 @@
             <effects />
         </layer>
     </layers>
-    <nonworld-instances />
+    <nonworld-instances>
+        <instance type="Array" uid="8">
+            <properties>
+                <width>10</width>
+                <height>1</height>
+                <depth>1</depth>
+            </properties>
+        </instance>
+    </nonworld-instances>
     <effects />
 </c2layout>
