@@ -31,7 +31,7 @@
             <instances>
                 <instance type="text_questao" uid="0">
                     <properties>
-                        <text>AHBsjdhasjdhjahdkjahdkjahdkjshdkshdflsdjgfkuhagf hljjh iççj hfço</text>
+                        <text>Enunciado da Questão</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial Rounded MT Bold,-53,400,0</font>
                         <color>0,0,0</color>
@@ -139,7 +139,7 @@
                 </instance>
                 <instance type="text_alternativa1" uid="4">
                     <properties>
-                        <text>Havai</text>
+                        <text>Alternativa1</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial Rounded MT Bold,-47,400,0</font>
                         <color>0,0,0</color>
@@ -166,7 +166,7 @@
                 </instance>
                 <instance type="text_alternativa2" uid="5">
                     <properties>
-                        <text>Havai</text>
+                        <text>Alternativa2</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial Rounded MT Bold,-47,400,0</font>
                         <color>0,0,0</color>
@@ -193,7 +193,7 @@
                 </instance>
                 <instance type="text_alternativa3" uid="6">
                     <properties>
-                        <text>Havai</text>
+                        <text>Alternativa3</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial Rounded MT Bold,-47,400,0</font>
                         <color>0,0,0</color>
