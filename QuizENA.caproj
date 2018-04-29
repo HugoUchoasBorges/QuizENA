@@ -12,8 +12,11 @@
     <used-plugins>
         <plugin author="Scirra" id="AJAX" version="1">AJAX</plugin>
         <plugin author="Scirra" id="Arr" version="1">Array</plugin>
+        <plugin author="Scirra" id="Button" version="1">Button</plugin>
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="TextBox" version="1">Text box</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
     </used-plugins>
     <used-behaviors />
@@ -83,14 +86,44 @@
         <object-type name="text_alternativa4" sid="749788994523252">
             <plugin id="Text" />
         </object-type>
+        <object-type name="text_nome_jogo" sid="228005350553301">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="sprite_titulo_jogo" sid="254274193205922">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="106160799892933" speed="5">
+                    <frame duration="1" hotspotX="0.500578" hotspotY="0.5" original-source="C:\Dev\Dev-U\QuizENA\Files\Art\nome_jogo_placeholder.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite" sid="811064774869063">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="612670664747735" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="text_highscore" sid="799441183826070">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="textbox_nome_jogador" sid="428704792208270">
+            <plugin id="TextBox" />
+        </object-type>
+        <object-type name="button_comecar_jogo" sid="187444538212147">
+            <plugin id="Button" />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
         <layout>Jogo.xml</layout>
         <layout>GameOver.xml</layout>
+        <layout>MenuInicial.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>main_events.xml</event-sheet>
+        <event-sheet>menu_incial.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Touch" uid="7">
