@@ -126,6 +126,9 @@
         <object-type name="text_gameover_posicao_ranking" sid="553549994715804">
             <plugin id="Text" />
         </object-type>
+        <object-type name="text_gameover_pontuacao" sid="799611497704763">
+            <plugin id="Text" />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
