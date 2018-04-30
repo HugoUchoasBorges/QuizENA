@@ -114,6 +114,18 @@
         <object-type name="button_comecar_jogo" sid="187444538212147">
             <plugin id="Button" />
         </object-type>
+        <object-type name="text_gameover_nome_jogador" sid="404446565674818">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="text_gameover_acertos" sid="114740002793401">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="text_gameover_erros" sid="587286929478768">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="text_gameover_posicao_ranking" sid="553549994715804">
+            <plugin id="Text" />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
@@ -122,8 +134,9 @@
         <layout>MenuInicial.xml</layout>
     </layout-folder>
     <event-folder>
-        <event-sheet>main_events.xml</event-sheet>
+        <event-sheet>jogo.xml</event-sheet>
         <event-sheet>menu_incial.xml</event-sheet>
+        <event-sheet>game_over.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Touch" uid="7">

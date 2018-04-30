@@ -2,7 +2,7 @@
 <c2layout>
     <name>Jogo</name>
     <sid>839599609338341</sid>
-    <event-sheet>main_events</event-sheet>
+    <event-sheet>jogo</event-sheet>
     <size>
         <width>1280</width>
         <height>720</height>

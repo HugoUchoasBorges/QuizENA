@@ -1,8 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
-    <name>main_events</name>
+    <name>jogo</name>
     <events>
+        <variable comment="Guarda o valor de pontos total" constant="0" name="number_total_pontos" sid="421370491942875" static="0" type="number">0</variable>
         <variable comment="Guarda a resposta da pergunta atual" constant="0" name="text_resposta_atual" sid="293674312418239" static="0" type="text"></variable>
         <variable comment="Guarda um número aleatório" constant="0" name="number_valor_aleatorio" sid="929924624816861" static="0" type="number">0</variable>
         <variable comment="GUarda a quantidade de questões no banco" constant="0" name="number_quantidade_questoes" sid="548830552442516" static="0" type="number">3</variable>
@@ -163,6 +164,9 @@
                         <action id="0" name="Set text" sid="402180581744889" type="text_feedback_resposta">
                             <param id="0" name="Text">&quot;correto&quot;</param>
                         </action>
+                        <action id="4" name="Set font color" sid="473143647169109" type="text_feedback_resposta">
+                            <param id="0" name="Color">rgb(0, 255, 0)</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="240584112390008">
@@ -173,15 +177,21 @@
                         <action id="0" name="Set text" sid="945524754146389" type="text_feedback_resposta">
                             <param id="0" name="Text">&quot;incorreto&quot;</param>
                         </action>
+                        <action id="4" name="Set font color" sid="896154710268749" type="text_feedback_resposta">
+                            <param id="0" name="Color">rgb(255, 0, 0)</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="142388029528002">
                     <conditions />
                     <actions>
-                        <action id="-16" name="Wait" sid="829814265630549" type="System">
-                            <param id="0" name="Seconds">0</param>
-                        </action>
                         <action id="-15" name="Set visible" sid="783541869348443" type="text_feedback_resposta">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="829814265630549" type="System">
+                            <param id="0" name="Seconds">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="151523985497474" type="text_feedback_resposta">
                             <param id="0" name="Visibility">0</param>
                         </action>
                         <action id="9" name="Delete" sid="807830340817421" type="Array">
