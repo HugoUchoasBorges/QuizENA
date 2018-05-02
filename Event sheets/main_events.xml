@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>main_events</name>
     <events>
+        <variable comment="Guarda a quantidade de acertos" constant="0" name="number_acertos" sid="792158276398595" static="0" type="number">0</variable>
         <variable comment="GUarda a quantidade de questões no banco " constant="1" name="number_quantidade_fixa_questoes" sid="363682282865544" static="0" type="number">3</variable>
         <variable comment="Guarda o número da questão atual" constant="0" name="number_questao_atual" sid="764372682975770" static="0" type="number">1</variable>
         <variable comment="Guarda o valor (em pontos) de cada questão" constant="0" name="number_valor_questao" sid="217949242879373" static="0" type="number">10</variable>
@@ -184,6 +185,10 @@
                                     <param id="0" name="Variable">number_pontuacao</param>
                                     <param id="1" name="Value">number_valor_questao</param>
                                 </action>
+                                <action id="-10" name="Add to" sid="488225230604601" type="System">
+                                    <param id="0" name="Variable">number_acertos</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
                                 <action id="0" name="Set text" sid="984674694125052" type="text_pontuacao">
                                     <param id="0" name="Text">number_pontuacao</param>
                                 </action>
@@ -334,6 +339,10 @@
                 <action id="-9" name="Set value" sid="812701916194319" type="System">
                     <param id="0" name="Variable">number_quantidade_questoes_rodada</param>
                     <param id="1" name="Value">NUMBER_QUANTIDADE_FIXA_QUESTOES</param>
+                </action>
+                <action id="-9" name="Set value" sid="885561580750959" type="System">
+                    <param id="0" name="Variable">number_acertos</param>
+                    <param id="1" name="Value">0</param>
                 </action>
             </actions>
         </event-block>

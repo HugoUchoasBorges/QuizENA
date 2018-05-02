@@ -54,12 +54,6 @@
                 <action id="0" name="Set text" sid="165999153738007" type="textbox_highscore">
                     <param id="0" name="Text">&quot;&quot;</param>
                 </action>
-                <action id="8" name="Sort" sid="787229689833224" type="array_informacao_jogadores">
-                    <param id="0" name="Axis">0</param>
-                </action>
-                <action id="7" name="Reverse" sid="876583230532400" type="array_informacao_jogadores">
-                    <param id="0" name="Axis">0</param>
-                </action>
             </actions>
             <sub-events>
                 <event-block sid="500330738847030">

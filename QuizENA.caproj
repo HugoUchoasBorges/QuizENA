@@ -137,6 +137,21 @@
         <object-type name="text_highscore" sid="763166314810545">
             <plugin id="Text" />
         </object-type>
+        <object-type name="text_nome_jogador" sid="963020867781056">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="text_acertos" sid="170008641251397">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="text_erros" sid="662140920029834">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="text_classificacao" sid="858818638653604">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="text_pontos" sid="300877930778250">
+            <plugin id="Text" />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
