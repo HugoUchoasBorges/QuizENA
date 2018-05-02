@@ -70,5 +70,15 @@
                 </event-block>
             </sub-events>
         </event-block>
+        <event-block sid="939309754629706">
+            <conditions>
+                <condition id="0" name="On clicked" sid="382318642738298" type="button_exportar_highscore" />
+            </conditions>
+            <actions>
+                <action id="12" name="Download" sid="358864981703269" type="array_informacao_jogadores">
+                    <param id="0" name="Filename">&quot;highscore.json&quot;</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>
