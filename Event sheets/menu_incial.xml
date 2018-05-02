@@ -3,7 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>menu_incial</name>
     <events>
-        <variable comment="Guarda o nome do player atual" constant="0" name="text_nome_player" sid="104961176069541" static="0" type="text"></variable>
+        <variable comment="Guarda o nome do player" constant="0" name="text_nome_player" sid="104961176069541" static="0" type="text"></variable>
         <event-block sid="326983612117065">
             <conditions>
                 <condition id="0" name="On clicked" sid="816469211792876" type="button_comecar_jogo" />
