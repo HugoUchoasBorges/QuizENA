@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>game_over</name>
+    <events>
+        <include>main_events</include>
+        <event-block sid="597894798093322">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="818363553731302" type="System" />
+            </conditions>
+            <actions>
+                <action id="8" name="Sort" sid="932655425265965" type="array_informacao_jogadores">
+                    <param id="0" name="Axis">0</param>
+                </action>
+                <action id="7" name="Reverse" sid="525326369969678" type="array_informacao_jogadores">
+                    <param id="0" name="Axis">0</param>
+                </action>
+                <action id="0" name="Set text" sid="383856923575976" type="text_nome_jogador">
+                    <param id="0" name="Text">text_nome_player</param>
+                </action>
+                <action id="0" name="Set text" sid="705466473856172" type="text_acertos">
+                    <param id="0" name="Text">&quot;Acertos: &quot; &amp; number_acertos</param>
+                </action>
+                <action id="0" name="Set text" sid="789939701059205" type="text_erros">
+                    <param id="0" name="Text">&quot;Erros: &quot; &amp; (NUMBER_QUANTIDADE_FIXA_QUESTOES - number_acertos)</param>
+                </action>
+                <action id="0" name="Set text" sid="108695399068198" type="text_pontos">
+                    <param id="0" name="Text">&quot;Pontos: &quot; &amp; number_pontuacao</param>
+                </action>
+                <action id="0" name="Set text" sid="806946218358308" type="text_classificacao">
+                    <param id="0" name="Text">&quot;Classificação: #&quot; &amp; (array_informacao_jogadores.IndexOf(number_pontuacao)+1)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="164842474813776">
+            <conditions>
+                <condition id="0" name="On clicked" sid="479306108302953" type="button_voltar_menu" />
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="496147536790068" type="System">
+                    <param id="0" name="Layout">MenuInicial</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="112734335771125">
+            <conditions>
+                <condition id="-3" name="On end of layout" sid="981190060454807" type="System" />
+            </conditions>
+            <actions>
+                <action id="-36" name="Save" sid="995612238348346" type="System">
+                    <param id="0" name="Slot">&quot;mysave&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
