@@ -42,6 +42,7 @@
                         </action>
                     </actions>
                 </event-block>
+                <comment>Aqui serão preenchidos os elementos na tela com as questões do arquivo lido</comment>
                 <event-block sid="707623847261767">
                     <conditions>
                         <condition id="0" name="On function" sid="836391033776797" type="Function">
@@ -114,27 +115,6 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-block sid="821661874683190">
-            <conditions>
-                <condition id="0" name="On function" sid="741961673481656" type="Function">
-                    <param id="0" name="Name">&quot;resetaVariaveis&quot;</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-9" name="Set value" sid="819565672262929" type="System">
-                    <param id="0" name="Variable">number_questao_atual</param>
-                    <param id="1" name="Value">1</param>
-                </action>
-                <action id="-9" name="Set value" sid="791514153276482" type="System">
-                    <param id="0" name="Variable">number_pontuacao</param>
-                    <param id="1" name="Value">0</param>
-                </action>
-                <action id="-9" name="Set value" sid="812701916194319" type="System">
-                    <param id="0" name="Variable">number_quantidade_questoes_rodada</param>
-                    <param id="1" name="Value">NUMBER_QUANTIDADE_FIXA_QUESTOES</param>
-                </action>
-            </actions>
-        </event-block>
         <event-group description="" sid="291900829548894" title="Checa Respostas">
             <sub-events>
                 <event-block sid="917737217597947">
@@ -265,33 +245,15 @@
                                         <condition id="-22" name="Else" sid="688051386418374" type="System" />
                                     </conditions>
                                     <actions>
-                                        <action disabled="1" id="2" name="Set at X" sid="138918174047323" type="array_informacao_jogadores">
-                                            <param id="0" name="X">(number_quantidade_partidas * 2)</param>
-                                            <param id="1" name="Value">text_nome_player</param>
-                                        </action>
-                                        <action disabled="1" id="2" name="Set at X" sid="843904679183976" type="array_informacao_jogadores">
-                                            <param id="0" name="X">(number_quantidade_partidas*2)+1</param>
+                                        <action id="5" name="Push" sid="127050525559912" type="array_informacao_jogadores">
+                                            <param id="0" name="Where">1</param>
                                             <param id="1" name="Value">number_pontuacao</param>
+                                            <param id="2" name="Axis">0</param>
                                         </action>
-                                        <action disabled="1" id="3" name="Set at XY" sid="272441856807946" type="array_informacao_jogadores">
-                                            <param id="0" name="X">number_quantidade_partidas</param>
-                                            <param id="1" name="Y">0</param>
-                                            <param id="2" name="Value">text_nome_player</param>
-                                        </action>
-                                        <action disabled="1" id="3" name="Set at XY" sid="156928163916778" type="array_informacao_jogadores">
-                                            <param id="0" name="X">number_quantidade_partidas+1</param>
+                                        <action id="3" name="Set at XY" sid="655281482226373" type="array_informacao_jogadores">
+                                            <param id="0" name="X">0</param>
                                             <param id="1" name="Y">1</param>
-                                            <param id="2" name="Value">number_pontuacao</param>
-                                        </action>
-                                        <action id="5" name="Push" sid="410130090962412" type="array_informacao_jogadores">
-                                            <param id="0" name="Where">1</param>
-                                            <param id="1" name="Value">number_pontuacao</param>
-                                            <param id="2" name="Axis">0</param>
-                                        </action>
-                                        <action id="5" name="Push" sid="233624554555657" type="array_informacao_jogadores">
-                                            <param id="0" name="Where">1</param>
-                                            <param id="1" name="Value">text_nome_player</param>
-                                            <param id="2" name="Axis">0</param>
+                                            <param id="2" name="Value">text_nome_player</param>
                                         </action>
                                         <action id="-10" name="Add to" sid="412087243367274" type="System">
                                             <param id="0" name="Variable">number_quantidade_partidas</param>
@@ -354,5 +316,26 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-block sid="821661874683190">
+            <conditions>
+                <condition id="0" name="On function" sid="741961673481656" type="Function">
+                    <param id="0" name="Name">&quot;resetaVariaveis&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="819565672262929" type="System">
+                    <param id="0" name="Variable">number_questao_atual</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="791514153276482" type="System">
+                    <param id="0" name="Variable">number_pontuacao</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="812701916194319" type="System">
+                    <param id="0" name="Variable">number_quantidade_questoes_rodada</param>
+                    <param id="1" name="Value">NUMBER_QUANTIDADE_FIXA_QUESTOES</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>

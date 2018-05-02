@@ -43,7 +43,7 @@
         <prop name="Pause on unfocus">No</prop>
         <prop name="Physics engine">Box2D asm.js</prop>
         <prop name="Preload sounds">Yes</prop>
-        <prop name="Preview browser">Chrome</prop>
+        <prop name="Preview browser">Edge</prop>
         <prop name="Sampling">Linear</prop>
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
@@ -113,9 +113,6 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="text_highscore" sid="799441183826070">
-            <plugin id="Text" />
-        </object-type>
         <object-type name="textbox_nome_jogador" sid="428704792208270">
             <plugin id="TextBox" />
         </object-type>
@@ -127,6 +124,18 @@
         </object-type>
         <object-type name="button_voltar_menu" sid="457277914942580">
             <plugin id="Button" />
+        </object-type>
+        <object-type name="textbox_highscore" sid="399477154461044">
+            <plugin id="TextBox" />
+        </object-type>
+        <object-type name="text_nome" sid="426999994002176">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="TextBox" sid="831455137227051">
+            <plugin id="TextBox" />
+        </object-type>
+        <object-type name="text_highscore" sid="763166314810545">
+            <plugin id="Text" />
         </object-type>
     </object-folder>
     <families />
