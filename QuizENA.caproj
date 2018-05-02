@@ -43,7 +43,7 @@
         <prop name="Pause on unfocus">No</prop>
         <prop name="Physics engine">Box2D asm.js</prop>
         <prop name="Preload sounds">Yes</prop>
-        <prop name="Preview browser">(default)</prop>
+        <prop name="Preview browser">Chrome</prop>
         <prop name="Sampling">Linear</prop>
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
@@ -56,9 +56,16 @@
         </object-type>
         <object-type name="text_tempo" sid="482678093129751">
             <plugin id="Text" />
+            <instance-variables>
+                <instance-variable name="number_minuto" sid="399536664138591" type="number" />
+                <instance-variable name="number_segundo" sid="473698972958645" type="number" />
+            </instance-variables>
         </object-type>
         <object-type name="text_pontuacao" sid="853124213400504">
             <plugin id="Text" />
+            <instance-variables>
+                <instance-variable name="number_pontuacao_atual" sid="262092406820901" type="number" />
+            </instance-variables>
         </object-type>
         <object-type name="text_alternativa1" sid="582921653295257">
             <plugin id="Text" />
@@ -72,7 +79,7 @@
         <object-type name="Touch" sid="590610570236070">
             <plugin id="Touch" />
         </object-type>
-        <object-type global="1" name="Array" sid="382523688082840">
+        <object-type global="1" name="array_questoes" sid="382523688082840">
             <plugin id="Arr" />
         </object-type>
         <object-type name="Function" sid="495010570290640">
@@ -115,6 +122,12 @@
         <object-type name="button_comecar_jogo" sid="187444538212147">
             <plugin id="Button" />
         </object-type>
+        <object-type global="1" name="array_informacao_jogadores" sid="359707990407482">
+            <plugin id="Arr" />
+        </object-type>
+        <object-type name="button_voltar_menu" sid="457277914942580">
+            <plugin id="Button" />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
@@ -125,6 +138,7 @@
     <event-folder>
         <event-sheet>main_events.xml</event-sheet>
         <event-sheet>menu_incial.xml</event-sheet>
+        <event-sheet>game_over.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Touch" uid="7">

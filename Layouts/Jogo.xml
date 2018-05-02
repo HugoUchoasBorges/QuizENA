@@ -58,7 +58,7 @@
                 </instance>
                 <instance type="text_num_questao" uid="1">
                     <properties>
-                        <text>5</text>
+                        <text>1</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial Rounded MT Bold,-47,400,0</font>
                         <color>0,0,0</color>
@@ -89,19 +89,23 @@
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial Rounded MT Bold,-47,400,0</font>
                         <color>0,0,0</color>
-                        <horizontal-alignment>Left</horizontal-alignment>
+                        <horizontal-alignment>Center</horizontal-alignment>
                         <vertical-alignment>Top</vertical-alignment>
                         <hotspot>Top-left</hotspot>
                         <wrapping>Word</wrapping>
                         <line-height>0</line-height>
                     </properties>
+                    <instance-variables>
+                        <number_minuto>0</number_minuto>
+                        <number_segundo>0</number_segundo>
+                    </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>525</x>
+                        <x>334</x>
                         <y>30</y>
                         <z>0</z>
-                        <width>133</width>
+                        <width>533</width>
                         <height>66</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
@@ -112,7 +116,7 @@
                 </instance>
                 <instance type="text_pontuacao" uid="3">
                     <properties>
-                        <text>2000</text>
+                        <text>0</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial Rounded MT Bold,-47,400,0</font>
                         <color>0,0,0</color>
@@ -122,6 +126,9 @@
                         <wrapping>Word</wrapping>
                         <line-height>0</line-height>
                     </properties>
+                    <instance-variables>
+                        <number_pontuacao_atual>0</number_pontuacao_atual>
+                    </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -268,9 +275,16 @@
         </layer>
     </layers>
     <nonworld-instances>
-        <instance type="Array" uid="8">
+        <instance type="array_questoes" uid="8">
             <properties>
-                <width>10</width>
+                <width>1</width>
+                <height>1</height>
+                <depth>1</depth>
+            </properties>
+        </instance>
+        <instance type="array_informacao_jogadores" uid="18">
+            <properties>
+                <width>0</width>
                 <height>1</height>
                 <depth>1</depth>
             </properties>

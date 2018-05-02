@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>game_over</name>
+    <events>
+        <event-block sid="164842474813776">
+            <conditions>
+                <condition id="0" name="On clicked" sid="479306108302953" type="button_voltar_menu" />
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="496147536790068" type="System">
+                    <param id="0" name="Layout">MenuInicial</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="112734335771125">
+            <conditions>
+                <condition id="-3" name="On end of layout" sid="981190060454807" type="System" />
+            </conditions>
+            <actions>
+                <action id="-36" name="Save" sid="995612238348346" type="System">
+                    <param id="0" name="Slot">&quot;mysave&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
