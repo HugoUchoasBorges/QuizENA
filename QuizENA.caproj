@@ -163,6 +163,7 @@
         <event-sheet>main_events.xml</event-sheet>
         <event-sheet>menu_incial.xml</event-sheet>
         <event-sheet>game_over.xml</event-sheet>
+        <event-sheet>global.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Touch" uid="7">

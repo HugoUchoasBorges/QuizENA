@@ -3,15 +3,13 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>menu_incial</name>
     <events>
-        <variable comment="Indica se as questões já foram carregadas" constant="0" name="number_questoes_carregadas" sid="343660053085476" static="0" type="number">0</variable>
-        <variable comment="Guarda o nome do player" constant="0" name="text_nome_player" sid="104961176069541" static="0" type="text"></variable>
-        <include>main_events</include>
+        <include>global</include>
         <event-block sid="921562723934968">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="395613669531516" type="System" />
             </conditions>
             <actions>
-                <action disabled="1" id="-37" name="Load" sid="544680127224638" type="System">
+                <action id="-37" name="Load" sid="544680127224638" type="System">
                     <param id="0" name="Slot">&quot;mysave&quot;</param>
                 </action>
                 <action id="0" name="Call function" sid="639720753196844" type="Function">
@@ -62,201 +60,50 @@
                 </event-block>
             </sub-events>
         </event-block>
-        <event-block sid="743423029524572">
+        <event-block sid="916153779881379">
             <conditions>
-                <condition id="0" name="On function" sid="888999811345895" type="Function">
-                    <param id="0" name="Name">&quot;insereHighscore&quot;</param>
+                <condition id="0" name="On completed" sid="311621171493661" type="AJAX">
+                    <param id="0" name="Tag">&quot;carregamentoInicial&quot;</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="0" name="Set text" sid="165999153738007" type="textbox_highscore">
-                    <param id="0" name="Text">&quot;&quot;</param>
+                <action id="0" name="Call function" sid="967682162467500" type="Function">
+                    <param id="0" name="Name">&quot;preenchePerguntas&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
                 </action>
             </actions>
-            <sub-events>
-                <event-block sid="500330738847030">
-                    <conditions>
-                        <condition id="3" name="For each element" sid="849482938997968" type="array_informacao_jogadores">
-                            <param id="0" name="Axes">2</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Set text" sid="992735482453393" type="textbox_highscore">
-                            <param id="0" name="Text">Self.Text &amp; array_informacao_jogadores.At(array_informacao_jogadores.CurX,0) &amp; &quot; pontos - &quot; &amp; array_informacao_jogadores.At(array_informacao_jogadores.CurX,1)  &amp; newline</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
         </event-block>
-        <event-group description="" sid="297030575745452" title="Carregamento das Questões">
-            <sub-events>
-                <event-block sid="732980972149544">
-                    <conditions>
-                        <condition id="0" name="On function" sid="831881508506577" type="Function">
-                            <param id="0" name="Name">&quot;carregamentoInicial&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="1" name="Request project file" sid="269501398995530" type="AJAX">
-                            <param id="0" name="Tag">&quot;carregamentoInicial&quot;</param>
-                            <param id="1" name="File">Perguntas.txt</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="916153779881379">
-                    <conditions>
-                        <condition id="0" name="On completed" sid="311621171493661" type="AJAX">
-                            <param id="0" name="Tag">&quot;carregamentoInicial&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Call function" sid="967682162467500" type="Function">
-                            <param id="0" name="Name">&quot;preenchePerguntas&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="459136516731936">
-                    <conditions>
-                        <condition id="0" name="On function" sid="288930622289615" type="Function">
-                            <param id="0" name="Name">&quot;preenchePerguntas&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Call function" sid="593029921357202" type="Function">
-                            <param id="0" name="Name">&quot;contaPerguntas&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
-                        </action>
-                    </actions>
-                    <sub-events>
-                        <variable comment="Pergunta temporaria" constant="0" name="text_pergunta_temp" sid="766299576590072" static="0" type="text">pergunta</variable>
-                        <variable comment="contador" constant="0" name="i" sid="720625359611984" static="0" type="number">0</variable>
-                        <event-block sid="604390661552948">
-                            <conditions>
-                                <condition id="-10" name="For" sid="835868586458937" type="System">
-                                    <param id="0" name="Name">&quot;pergunta&quot;</param>
-                                    <param id="1" name="Start index">0</param>
-                                    <param id="2" name="End index">array_questoes.Width - 1</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="2" name="Set at X" sid="862797247677381" type="array_questoes">
-                                    <param id="0" name="X">i</param>
-                                    <param id="1" name="Value">tokenat(AJAX.LastData, i, &quot;|&quot;)</param>
-                                </action>
-                                <action id="-10" name="Add to" sid="416955539811422" type="System">
-                                    <param id="0" name="Variable">i</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="721981642292014">
-                            <conditions />
-                            <actions>
-                                <action id="-9" name="Set value" sid="477825421228000" type="System">
-                                    <param id="0" name="Variable">number_questoes_carregadas</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-                <event-block sid="185375549163867">
-                    <conditions>
-                        <condition id="0" name="On function" sid="607674189069809" type="Function">
-                            <param id="0" name="Name">&quot;contaPerguntas&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <variable comment="Pergunta temporaria" constant="0" name="text_pergunta_temp" sid="685440540608569" static="0" type="text">pergunta</variable>
-                        <variable comment="contador" constant="0" name="i" sid="819146604943979" static="0" type="number">0</variable>
-                        <event-block sid="590003439435044">
-                            <conditions>
-                                <condition id="-23" name="While" sid="492120666885312" type="System" />
-                                <condition id="-14" name="Compare variable" sid="297814987258399" type="System">
-                                    <param id="0" name="Variable">text_pergunta_temp</param>
-                                    <param id="1" name="Comparison">1</param>
-                                    <param id="2" name="Value">&quot;&quot;</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-9" name="Set value" sid="468665509908511" type="System">
-                                    <param id="0" name="Variable">text_pergunta_temp</param>
-                                    <param id="1" name="Value">tokenat(AJAX.LastData, i, &quot;|&quot;)</param>
-                                </action>
-                            </actions>
-                            <sub-events>
-                                <event-block sid="630829100879669">
-                                    <conditions>
-                                        <condition id="-14" name="Compare variable" sid="608359761050684" type="System">
-                                            <param id="0" name="Variable">text_pergunta_temp</param>
-                                            <param id="1" name="Comparison">1</param>
-                                            <param id="2" name="Value">&quot;&quot;</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-10" name="Add to" sid="144939158967342" type="System">
-                                            <param id="0" name="Variable">i</param>
-                                            <param id="1" name="Value">1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                        <event-block sid="853757751409856">
-                            <conditions />
-                            <actions>
-                                <action id="-9" name="Set value" sid="351467292514718" type="System">
-                                    <param id="0" name="Variable">number_quantidade_total_questoes</param>
-                                    <param id="1" name="Value">i</param>
-                                </action>
-                                <action id="1" name="Set size" sid="733437211277314" type="array_questoes">
-                                    <param id="0" name="Width">number_quantidade_total_questoes</param>
-                                    <param id="1" name="Height">1</param>
-                                    <param id="2" name="Depth">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-            </sub-events>
-        </event-group>
-        <event-group description="" sid="520166041646495" title="Botões">
-            <sub-events>
-                <event-block sid="326983612117065">
-                    <conditions>
-                        <condition id="0" name="On clicked" sid="816469211792876" type="button_comecar_jogo" />
-                        <condition id="0" inverted="1" name="Compare text" sid="536241136257514" type="textbox_nome_jogador">
-                            <param id="0" name="Text">&quot;&quot;</param>
-                            <param id="1" name="Case">0</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Call function" sid="899440302574263" type="Function">
-                            <param id="0" name="Name">&quot;resetaVariaveis&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
-                        </action>
-                        <action id="-9" name="Set value" sid="893919413342301" type="System">
-                            <param id="0" name="Variable">text_nome_player</param>
-                            <param id="1" name="Value">textbox_nome_jogador.Text</param>
-                        </action>
-                        <action id="-2" name="Go to layout" sid="906162667300253" type="System">
-                            <param id="0" name="Layout">Jogo</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="939309754629706">
-                    <conditions>
-                        <condition id="0" name="On clicked" sid="382318642738298" type="button_exportar_highscore" />
-                    </conditions>
-                    <actions>
-                        <action id="12" name="Download" sid="358864981703269" type="array_informacao_jogadores">
-                            <param id="0" name="Filename">&quot;highscore.json&quot;</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
-        </event-group>
+        <event-block sid="326983612117065">
+            <conditions>
+                <condition id="0" name="On clicked" sid="816469211792876" type="button_comecar_jogo" />
+                <condition id="0" inverted="1" name="Compare text" sid="536241136257514" type="textbox_nome_jogador">
+                    <param id="0" name="Text">&quot;&quot;</param>
+                    <param id="1" name="Case">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="899440302574263" type="Function">
+                    <param id="0" name="Name">&quot;resetaVariaveis&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="-9" name="Set value" sid="893919413342301" type="System">
+                    <param id="0" name="Variable">text_nome_player</param>
+                    <param id="1" name="Value">textbox_nome_jogador.Text</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="906162667300253" type="System">
+                    <param id="0" name="Layout">Jogo</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="939309754629706">
+            <conditions>
+                <condition id="0" name="On clicked" sid="382318642738298" type="button_exportar_highscore" />
+            </conditions>
+            <actions>
+                <action id="12" name="Download" sid="358864981703269" type="array_informacao_jogadores">
+                    <param id="0" name="Filename">&quot;highscore.json&quot;</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>

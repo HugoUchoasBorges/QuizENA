@@ -3,7 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>game_over</name>
     <events>
-        <include>main_events</include>
+        <include>global</include>
         <event-block sid="597894798093322">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="818363553731302" type="System" />
@@ -22,7 +22,7 @@
                     <param id="0" name="Text">&quot;Acertos: &quot; &amp; number_acertos</param>
                 </action>
                 <action id="0" name="Set text" sid="789939701059205" type="text_erros">
-                    <param id="0" name="Text">&quot;Erros: &quot; &amp; (NUMBER_QUANTIDADE_FIXA_QUESTOES - number_acertos)</param>
+                    <param id="0" name="Text">&quot;Erros: &quot; &amp; (number_quantidade_fixa_questoes - number_acertos)</param>
                 </action>
                 <action id="0" name="Set text" sid="108695399068198" type="text_pontos">
                     <param id="0" name="Text">&quot;Pontos: &quot; &amp; number_pontuacao</param>
