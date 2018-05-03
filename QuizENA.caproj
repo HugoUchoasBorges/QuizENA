@@ -43,7 +43,7 @@
         <prop name="Pause on unfocus">No</prop>
         <prop name="Physics engine">Box2D asm.js</prop>
         <prop name="Preload sounds">Yes</prop>
-        <prop name="Preview browser">Chrome</prop>
+        <prop name="Preview browser">Edge</prop>
         <prop name="Sampling">Linear</prop>
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
@@ -87,9 +87,6 @@
         </object-type>
         <object-type name="AJAX" sid="997526206029183">
             <plugin id="AJAX" />
-        </object-type>
-        <object-type name="text_feedback_resposta" sid="172142645730916">
-            <plugin id="Text" />
         </object-type>
         <object-type name="text_alternativa4" sid="749788994523252">
             <plugin id="Text" />

@@ -3,15 +3,17 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>main_events</name>
     <events>
-        <variable comment="Guarda a quantidade de acertos" constant="0" name="number_acertos" sid="792158276398595" static="0" type="number">0</variable>
-        <variable comment="GUarda a quantidade de questões no banco " constant="1" name="number_quantidade_fixa_questoes" sid="363682282865544" static="0" type="number">3</variable>
-        <variable comment="Guarda o número da questão atual" constant="0" name="number_questao_atual" sid="764372682975770" static="0" type="number">1</variable>
+        <include>menu_incial</include>
         <variable comment="Guarda o valor (em pontos) de cada questão" constant="0" name="number_valor_questao" sid="217949242879373" static="0" type="number">10</variable>
+        <variable comment="GUarda a quantidade de questões da partida" constant="0" name="number_quantidade_fixa_questoes" sid="363682282865544" static="0" type="number">5</variable>
+        <variable comment="Guarda a quantidade de acertos" constant="0" name="number_acertos" sid="792158276398595" static="0" type="number">0</variable>
+        <variable comment="GUarda a quantidade de questões no banco " constant="0" name="number_quantidade_total_questoes" sid="806636620557155" static="0" type="number">0</variable>
+        <variable comment="Guarda o número da questão atual" constant="0" name="number_questao_atual" sid="764372682975770" static="0" type="number">1</variable>
         <variable comment="Guarda a pontuação do player atual" constant="0" name="number_pontuacao" sid="864645461314145" static="0" type="number">0</variable>
         <variable comment="Guarda a quantidade de partidas completadas" constant="0" name="number_quantidade_partidas" sid="278528031398075" static="0" type="number">0</variable>
         <variable comment="Guarda a resposta da pergunta atual" constant="0" name="text_resposta_atual" sid="293674312418239" static="0" type="text"></variable>
         <variable comment="Guarda um número aleatório" constant="0" name="number_valor_aleatorio" sid="929924624816861" static="0" type="number">0</variable>
-        <variable comment="Guarda a quantidade de questões no banco na rodada" constant="0" name="number_quantidade_questoes_rodada" sid="548830552442516" static="0" type="number">3</variable>
+        <variable comment="Guarda a quantidade de questões no banco na rodada" constant="0" name="number_quantidade_questoes_rodada" sid="548830552442516" static="0" type="number">0</variable>
         <event-group description="" sid="236584356558392" title="Inicia Jogo">
             <sub-events>
                 <event-block sid="349432307593676">
@@ -19,27 +21,9 @@
                         <condition id="-2" name="On start of layout" sid="270354551733884" type="System" />
                     </conditions>
                     <actions>
-                        <action id="0" name="Call function" sid="726498895184101" type="Function">
-                            <param id="0" name="Name">&quot;carregaQuestoes&quot;</param>
+                        <action id="0" name="Call function" sid="435980052468865" type="Function">
+                            <param id="0" name="Name">&quot;pegaQuestaoAleatoria&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="945197412327779">
-                    <conditions>
-                        <condition id="0" name="On function" sid="171786694328824" type="Function">
-                            <param id="0" name="Name">&quot;carregaQuestoes&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="1" name="Request project file" sid="437846232733359" type="AJAX">
-                            <param id="0" name="Tag">&quot;carregaQuestoes&quot;</param>
-                            <param id="1" name="File">Perguntas.txt</param>
-                        </action>
-                        <action id="1" name="Set size" sid="936581015072005" type="array_questoes">
-                            <param id="0" name="Width">NUMBER_QUANTIDADE_FIXA_QUESTOES</param>
-                            <param id="1" name="Height">1</param>
-                            <param id="2" name="Depth">1</param>
                         </action>
                     </actions>
                 </event-block>
@@ -53,7 +37,7 @@
                     <actions>
                         <action id="-9" name="Set value" sid="681700098919149" type="System">
                             <param id="0" name="Variable">number_valor_aleatorio</param>
-                            <param id="1" name="Value">round(random(0, number_quantidade_questoes_rodada-1))</param>
+                            <param id="1" name="Value">round(random(0, ( array_questoes.Width -1)))</param>
                         </action>
                         <action id="0" name="Set text" sid="245365489266121" type="text_questao">
                             <param id="0" name="Text">tokenat(array_questoes.At(number_valor_aleatorio), 0, &quot;;&quot;)</param>
@@ -72,47 +56,6 @@
                             <param id="1" name="Value">tokenat(array_questoes.At(number_valor_aleatorio), 4, &quot;;&quot;)</param>
                         </action>
                     </actions>
-                </event-block>
-                <event-block sid="722682270611053">
-                    <conditions>
-                        <condition id="0" name="On completed" sid="224216833698057" type="AJAX">
-                            <param id="0" name="Tag">&quot;carregaQuestoes&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <variable comment="contador" constant="0" name="i" sid="492659158497851" static="0" type="number">0</variable>
-                        <event-block sid="209399720514028">
-                            <conditions>
-                                <condition id="-10" name="For" sid="367242331608176" type="System">
-                                    <param id="0" name="Name">&quot;Para cada questao colocar&quot;</param>
-                                    <param id="1" name="Start index">0</param>
-                                    <param id="2" name="End index">number_quantidade_questoes_rodada</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="2" name="Set at X" sid="938189014572405" type="array_questoes">
-                                    <param id="0" name="X">i</param>
-                                    <param id="1" name="Value">tokenat(AJAX.LastData, i, &quot;|&quot;)</param>
-                                </action>
-                                <action id="-10" name="Add to" sid="412877042778397" type="System">
-                                    <param id="0" name="Variable">i</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                            </actions>
-                            <sub-events>
-                                <event-block sid="171888185353773">
-                                    <conditions />
-                                    <actions>
-                                        <action id="0" name="Call function" sid="584110152590795" type="Function">
-                                            <param id="0" name="Name">&quot;pegaQuestaoAleatoria&quot;</param>
-                                            <param id="1" name="Parameter {n}"></param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
@@ -163,11 +106,7 @@
                             <param id="0" name="Name">&quot;checarResposta&quot;</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="-15" name="Set visible" sid="492427405365023" type="text_feedback_resposta">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                    </actions>
+                    <actions />
                     <sub-events>
                         <event-block sid="764320345453495">
                             <conditions>
@@ -178,9 +117,6 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="0" name="Set text" sid="402180581744889" type="text_feedback_resposta">
-                                    <param id="0" name="Text">&quot;correto&quot;</param>
-                                </action>
                                 <action id="-10" name="Add to" sid="812698815475235" type="System">
                                     <param id="0" name="Variable">number_pontuacao</param>
                                     <param id="1" name="Value">number_valor_questao</param>
@@ -198,20 +134,13 @@
                             <conditions>
                                 <condition id="-22" name="Else" sid="590282776597841" type="System" />
                             </conditions>
-                            <actions>
-                                <action id="0" name="Set text" sid="945524754146389" type="text_feedback_resposta">
-                                    <param id="0" name="Text">&quot;incorreto&quot;</param>
-                                </action>
-                            </actions>
+                            <actions />
                         </event-block>
                         <event-block sid="142388029528002">
                             <conditions />
                             <actions>
                                 <action id="-16" name="Wait" sid="829814265630549" type="System">
                                     <param id="0" name="Seconds">0</param>
-                                </action>
-                                <action id="-15" name="Set visible" sid="783541869348443" type="text_feedback_resposta">
-                                    <param id="0" name="Visibility">0</param>
                                 </action>
                                 <action id="9" name="Delete" sid="807830340817421" type="array_questoes">
                                     <param id="0" name="Index">number_valor_aleatorio</param>
@@ -338,7 +267,7 @@
                 </action>
                 <action id="-9" name="Set value" sid="812701916194319" type="System">
                     <param id="0" name="Variable">number_quantidade_questoes_rodada</param>
-                    <param id="1" name="Value">NUMBER_QUANTIDADE_FIXA_QUESTOES</param>
+                    <param id="1" name="Value">number_quantidade_fixa_questoes</param>
                 </action>
                 <action id="-9" name="Set value" sid="885561580750959" type="System">
                     <param id="0" name="Variable">number_acertos</param>
