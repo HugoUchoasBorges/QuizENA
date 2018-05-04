@@ -3,195 +3,285 @@ José;
 Francisco;
 Antônio;
 José;
+1;
 |
 Qual desses não é apelido de um professor da Unifei?;
 Jesus;
 Cachaça;
 Claudemônio;
 Jesus;
+1;
 |
 Qual o professor que tem um projeto de máquina do tempo?;
 Kláudia;
 Klippert;
 Kashimoto;
 Klippert;
+2;
 |
 Qual o grupo de personagens pertencem a Guarda Infinita (grupo criado por Adam Warlock para guardar e vigiar as joias do infinito)? ;
 Adam Warlock- Hulk- Thanos- Pip, o Troll- O Colecionador- Magus;
 Magus- Adam Warlock- Drax, o destruidor- Serpente da Lua- Thanos- O Colecionador;
 Gamora- Pip, o Troll- Drax,o destruidor- Serpente da Lua- Adam Warlock- Thanos;
 Gamora- Pip, o Troll- Drax,o destruidor- Serpente da Lua- Adam Warlock- Thanos;
+2;
 |
 Quem é o responsável pelo programa do soro do super soldado no universo ultimate da marvel ?;
 Bruce Banner;
 Haword Stark;
 Hank Pym;
 Hank Pym;
+2;
 |
 Quantos Robins o Batman já teve ?;
 4;
 6;
 5;
 4;
+2;
 |
 Quem são os membros originais da Justiça Jovem?;
 Robin, Mutano e Speedy;
 Robin, Mutano e Ravena;
 Robin, SuperBoy e Kid Flash;
 Robin, SuperBoy e Kid Flash;
+1;
 |
 Qual o objetivo do Thanos ao reunir todas as joias do infinito?;
 Ter o controle de todo o universo;
 Destruir os demais titãs;
 Matar metade dos seres do universo;
 Matar metade dos seres do universo;
+1;
 |
 Em Shoukugeki no Souma, qual o tipo de faca os irmãos Aldini possuem?;
 Paring Knife;
 Cleaver;
 Mezzaluna;
 Mezzaluna;
+1;
 |
 Em Hunter x Hunter, em qual luta Gon Freecs sacrificou todo seu potencial(sua vida)?;
 Contra o Hisoka;
 Contra o Razor;
 Contra a Neferpitou;
 Contra a Neferpitou;
+1;
 |
 Em Boku no Hero, quem na classe 1-A possui a peculiaridade Animal Voice?;
 Mezo Shoji;
 Hanta Sero;
 Koji Koda;
 Mezo Shoji;
+1;
 |
 Em Sword Art Online, quem é o lider da guilda Cavaleiros do Juramento de Sangue?;
 Kirigaya;
 Nobuyuki;
 Heathcliff;
 Heathcliff;
+1;
 |
 Qual o nome do filho do Kratos?;
 Atheus;
 Atros;
 Atreus;
 Atreus;
+1;
 |
 Qual o nome do protagonistada série Witcher?;
 Gerald;
 Gerard;
 Geralt;
 Geralt;
+1;
 |
 Qual era o nome original do Mario?;
 Plumber man;
 Mario Bros;
 Jumpman;
 Jumpman;
+2;
 |
 Qual o sobrenome do Mario?;
 Bros;
 Plumber;
 Mario;
 Mario;
+2;
 |
 Em Dragon Ball Super, qual o nome da assistente do Champa?;
 Valeria;
 Whisa;
 Vados;
 Vados;
+1;
 |
 Qual das alternativas não é uma franquia de jogos de corridas;
 Top Gear;
 Need for Speed;
 Uncharted;
 Uncharted;
+1;
 |
 Em Dragon Ball Super, quem foi o vencedor do Torneio do Poder?;
 Goku;
 Freeza;
 Androide 17;
 Androide 17;
+1;
 |
 Qual foi o primeiro episódio de Star Wars lançado?;
 Episódio 1;
 Episódio 3;
 Episódio 4;
 Episódio 1;
+2;
 |
 Qual desses super-heróis completou 80 anos em 2018?;
 Batman;
 Shazam;
 Superman;
 Superman;
+3;
 |
 No anime Psycho-Pass, o que é medido pelos policiais nos criminosos?;
 Psicopatia;
 Periculosidade;
 Coeficiente Criminal;
 Coeficiente Criminal;
+2;
 |
 Qual o poder de luta do Kakaroto ?;
 Menos de 8 mil;
 Exatamente 8 mil;
 Mais de 8 mil;
 Mais de 8 mil;
+1;
 |
 Quantas tropas de lanternas existem?;
 8;
 10;
 9;
 9;
+2;
 |
 Quantos pokemons tinham na 1º geração?;
 101;
 250;
 151;
 151;
+2;
 |
 Em Turma da Monica, qual o nome completo do personagem Piteco?;
 Australopitecos Souza;
 Homo Piteco Sapiens; 
 Pithecanthropus Erectus da Silva;
 Pithecanthropus Erectus da Silva;
+2;
 |
 Quantos jogos do Final Fantasy existem?;
 15;
 23;
 Mais de 30;
 23;
+2;
 |
 Qual animal de estimação a Mulher Maravilha possui?;
 Macaco;
 Rinoceronte;
 Canguru;
 Macaco;
+2;
 |
 Em Hunter x Hunter, qual nome do Rei das Formigas Chimera ?;
 Netero;
 Shaiapouf;
 Meruem;
 Meruem;
+1;
 |
 No anime Dragon Ball, quantas vezes o Kuririn morreu?;
 8;
 5;
 3;
 3;
+2;
 |
 Qual desses personagens de Dragon Ball nunca morreu?;
 Goten;
 Chichi;
 Mister Satan;
 Mister Satan;
+2;
 |
 Quantos Hulks existem ?;
 5;
 12;
 15;
 5;
+3;
 |
 Qual nome da arma empunhada por Bill Raio Beta,abençoado pelo propio Odin?;
 Jarnbjorn;
 Machado Sangrento;
 Rompe-Tormentas;
 Jarnbjorn;
+2;
+|
+No ep 21 de Dragon Ball Z quantos saibaimans surgem?;
+7;
+5;
+6;
+5;
+2;
+|
+Qual o nome da Capitã Marvel?;
+Peggy Carter;
+Maria Hill;
+Carol Danvers;
+Peggy Carter;
+1;
+|
+Quais personagens da Marvel faziam parte da primeira X-Force?;
+Wolverine, Fantomex, Psylocke, Arcanjo, E.V.A., Dominó, Deathlok;
+Apache, Dominó, Arcanjo, Míssil, Cable, Wolverine, Deathlok;
+Cable, Míssil, Boom-Boom, Apache, Shatterstar, Feral e Dominó;
+Wolverine, Fantomex, Psylocke, Arcanjo, E.V.A., Dominó, Deathlok;
+2;
+|
+Qual desses materiais é possivel envenenar os Daxamitas?;
+Kryptonita;
+Aço;
+Chumbo;
+Aço;
+2;
+|
+Qual o nome do primeiro Lanterna Vermelho?;
+Dex-Starr;
+Abin Surr;
+Atrócitus;
+Dex-Starr;
+2;
+|
+Nos Novos 52 , quem é o Victor Stone?;
+Mutano;
+O Pensador;
+Cyborg;
+O Pensador;
+2;
+|
+Qual nome do personagem que declarou que era seu destino destruir Asgard através da combinação da sua Espada Crepúsculo e a Chama Eterna?;
+Hela;
+Freyja;
+Surtur;
+Surtur;
+2;
+|
+Quais são os integrantes da Ordem Negra?;
+Fauce do Ébano, Estrela Negra, Magus, Galactus, Supergigante;
+Próxima Meia-Noite, Corvus Glaive, Thanos, Jörmungand, Fauce do Ébano;
+Corvus Glaive, Fauce de Ébano, Próxima Meia-Noite, Estrela Negra, Supergigante;
+Fauce do Ébano, Estrela Negra, Magus, Galactus, Supergigante;
+3;
+|

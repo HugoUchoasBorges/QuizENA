@@ -169,11 +169,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>26</x>
-                        <y>379</y>
+                        <x>10</x>
+                        <y>258</y>
                         <z>0</z>
-                        <width>227</width>
-                        <height>56</height>
+                        <width>1222</width>
+                        <height>558</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
