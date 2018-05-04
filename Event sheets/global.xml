@@ -5,8 +5,8 @@
     <events>
         <variable comment="Indica se as questões já foram carregadas" constant="0" name="number_questoes_carregadas" sid="343660053085476" static="0" type="number">0</variable>
         <variable comment="Guarda o nome do player" constant="0" name="text_nome_player" sid="104961176069541" static="0" type="text"></variable>
-        <variable comment="Guarda o valor (em pontos) de cada questão" constant="0" name="number_valor_questao" sid="217949242879373" static="0" type="number">10</variable>
-        <variable comment="GUarda a quantidade de questões da partida" constant="0" name="number_quantidade_fixa_questoes" sid="363682282865544" static="0" type="number">5</variable>
+        <variable comment="Guarda o valor (em pontos) de cada questão" constant="0" name="number_valor_questao" sid="217949242879373" static="0" type="number">50</variable>
+        <variable comment="Guarda a quantidade de questões da partida" constant="0" name="number_quantidade_fixa_questoes" sid="363682282865544" static="0" type="number">10</variable>
         <variable comment="Guarda a quantidade de acertos" constant="0" name="number_acertos" sid="792158276398595" static="0" type="number">0</variable>
         <variable comment="GUarda a quantidade de questões no banco " constant="0" name="number_quantidade_total_questoes" sid="806636620557155" static="0" type="number">0</variable>
         <variable comment="Guarda o número da questão atual" constant="0" name="number_questao_atual" sid="764372682975770" static="0" type="number">1</variable>
@@ -43,6 +43,9 @@
                     <param id="0" name="Variable">text_resposta_atual</param>
                     <param id="1" name="Value">tokenat(array_questoes.At(number_valor_aleatorio), 4, &quot;;&quot;)</param>
                 </action>
+                <action id="0" name="Set text" sid="524883912555254" type="text_num_questao">
+                    <param id="0" name="Text">number_questao_atual &amp; &quot;/&quot; &amp; number_quantidade_fixa_questoes</param>
+                </action>
             </actions>
         </event-block>
         <comment>Método para chegar se a resposta selecionada está correta, chamar a próxima questão ou terminar o jogo</comment>
@@ -75,6 +78,27 @@
                             <param id="0" name="Text">number_pontuacao</param>
                         </action>
                     </actions>
+                    <sub-events>
+                        <comment>Ponto extra para cada 3 acertos</comment>
+                        <event-block sid="417944414078379">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="160523650528436" type="System">
+                                    <param id="0" name="First value">number_acertos % 3</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Add to" sid="206517079431983" type="System">
+                                    <param id="0" name="Variable">number_pontuacao</param>
+                                    <param id="1" name="Value">number_valor_questao</param>
+                                </action>
+                                <action id="0" name="Set text" sid="235523419783229" type="text_pontuacao">
+                                    <param id="0" name="Text">number_pontuacao</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="507491797756324">
                     <conditions>
@@ -110,9 +134,6 @@
                                 <action id="-10" name="Add to" sid="532948046669444" type="System">
                                     <param id="0" name="Variable">number_questao_atual</param>
                                     <param id="1" name="Value">1</param>
-                                </action>
-                                <action id="0" name="Set text" sid="524883912555254" type="text_num_questao">
-                                    <param id="0" name="Text">number_questao_atual</param>
                                 </action>
                                 <action id="0" name="Call function" sid="330335876177479" type="Function">
                                     <param id="0" name="Name">&quot;pegaQuestaoAleatoria&quot;</param>
@@ -314,6 +335,10 @@
                             <param id="0" name="Width">number_quantidade_total_questoes</param>
                             <param id="1" name="Height">1</param>
                             <param id="2" name="Depth">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="411370408953636" type="System">
+                            <param id="0" name="Variable">number_quantidade_fixa_questoes</param>
+                            <param id="1" name="Value">min(number_quantidade_total_questoes, number_quantidade_fixa_questoes)</param>
                         </action>
                     </actions>
                 </event-block>
