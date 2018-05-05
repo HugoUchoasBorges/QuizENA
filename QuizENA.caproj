@@ -484,6 +484,8 @@
         <file name="Erro1.ogg" />
         <file name="Musica Inicio.m4a" />
         <file name="Musica Inicio.ogg" />
+        <file name="countdown.m4a" />
+        <file name="countdown.ogg" />
     </sounds-folder>
     <music-folder />
     <files-folder>
