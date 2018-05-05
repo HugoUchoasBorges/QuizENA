@@ -152,6 +152,9 @@
         <object-type name="button_exportar_highscore" sid="263495047191979">
             <plugin id="Button" />
         </object-type>
+        <object-type name="text_nome_constrain" sid="700314023066717">
+            <plugin id="Text" />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
