@@ -179,6 +179,12 @@
                         <action id="0" name="Set text" sid="234582499298668" type="text_pontuacao">
                             <param id="0" name="Text">number_pontuacao</param>
                         </action>
+                        <action id="0" name="Play" sid="870454400869787" type="Audio">
+                            <param id="0" name="Audio file">Acerto1</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;acerto1&quot;</param>
+                        </action>
                     </actions>
                     <sub-events>
                         <comment>Ponto extra para cada 3 acertos</comment>
@@ -206,7 +212,14 @@
                     <conditions>
                         <condition id="-22" name="Else" sid="301700928168755" type="System" />
                     </conditions>
-                    <actions />
+                    <actions>
+                        <action id="0" name="Play" sid="861439030398056" type="Audio">
+                            <param id="0" name="Audio file">Erro1</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">-10</param>
+                            <param id="1" name="Tag (optional)">&quot;erro1&quot;</param>
+                        </action>
+                    </actions>
                 </event-block>
                 <event-block sid="692833082171352">
                     <conditions />

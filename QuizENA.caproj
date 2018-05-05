@@ -12,6 +12,7 @@
     <used-plugins>
         <plugin author="Scirra" id="AJAX" version="1">AJAX</plugin>
         <plugin author="Scirra" id="Arr" version="1">Array</plugin>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Button" version="1">Button</plugin>
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
@@ -155,6 +156,9 @@
         <object-type name="text_nome_constrain" sid="700314023066717">
             <plugin id="Text" />
         </object-type>
+        <object-type name="Audio" sid="237876690559775">
+            <plugin id="Audio" />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
@@ -176,8 +180,33 @@
         </global-instance>
         <global-instance type="Function" uid="9" />
         <global-instance type="AJAX" uid="10" />
+        <global-instance type="Audio" uid="27">
+            <properties>
+                <timescale-audio>Off</timescale-audio>
+                <saveload>All</saveload>
+                <play-in-background>No</play-in-background>
+                <positioned-audio></positioned-audio>
+                <panning-model>HRTF</panning-model>
+                <distance-model>Inverse</distance-model>
+                <listener-z-height>600</listener-z-height>
+                <reference-distance>600</reference-distance>
+                <maximum-distance>10000</maximum-distance>
+                <roll-off-factor>1</roll-off-factor>
+            </properties>
+        </global-instance>
     </global-instances>
-    <sounds-folder />
+    <sounds-folder>
+        <file name="Acerto1.m4a" />
+        <file name="Acerto1.ogg" />
+        <file name="Acerto2.m4a" />
+        <file name="Acerto2.ogg" />
+        <file name="Musica Quiz.m4a" />
+        <file name="Musica Quiz.ogg" />
+        <file name="Erro1.m4a" />
+        <file name="Erro1.ogg" />
+        <file name="Musica Inicio.m4a" />
+        <file name="Musica Inicio.ogg" />
+    </sounds-folder>
     <music-folder />
     <files-folder>
         <file-folder name="Icons">
