@@ -95,14 +95,6 @@
         <object-type name="text_nome_jogo" sid="228005350553301">
             <plugin id="Text" />
         </object-type>
-        <object-type name="sprite_titulo_jogo" sid="254274193205922">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="106160799892933" speed="5">
-                    <frame duration="1" hotspotX="0.500578" hotspotY="0.5" original-source="C:\Dev\Dev-U\QuizENA\Files\Art\nome_jogo_placeholder.png" />
-                </animation>
-            </animation-folder>
-        </object-type>
         <object-type name="Sprite" sid="811064774869063">
             <plugin id="Sprite" />
             <animation-folder>
@@ -114,9 +106,6 @@
         <object-type name="textbox_nome_jogador" sid="428704792208270">
             <plugin id="TextBox" />
         </object-type>
-        <object-type name="button_comecar_jogo" sid="187444538212147">
-            <plugin id="Button" />
-        </object-type>
         <object-type global="1" name="array_informacao_jogadores" sid="359707990407482">
             <plugin id="Arr" />
         </object-type>
@@ -126,14 +115,8 @@
         <object-type name="textbox_highscore" sid="399477154461044">
             <plugin id="TextBox" />
         </object-type>
-        <object-type name="text_nome" sid="426999994002176">
-            <plugin id="Text" />
-        </object-type>
         <object-type name="TextBox" sid="831455137227051">
             <plugin id="TextBox" />
-        </object-type>
-        <object-type name="text_highscore" sid="763166314810545">
-            <plugin id="Text" />
         </object-type>
         <object-type name="text_nome_jogador" sid="963020867781056">
             <plugin id="Text" />
@@ -158,6 +141,128 @@
         </object-type>
         <object-type name="Audio" sid="237876690559775">
             <plugin id="Audio" />
+        </object-type>
+        <object-type name="sprite_logo" sid="521900885936054">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="650452413912040" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.501259" original-source="D:\Google Drive\Dev-U\Artes\Quiz ENA\logo.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="sprite_ranking" sid="732971500411658">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="941847050843192" speed="5">
+                    <frame duration="1" hotspotX="0.500949" hotspotY="0.503268" original-source="D:\Google Drive\Dev-U\Artes\Quiz ENA\ranking.png">
+                        <collision-poly>
+                            <point x="0.0702087" y="0.0522876" />
+                            <point x="0.296015" y="0.980392" />
+                            <point x="0.0702087" y="0.784314" />
+                            <point x="0.0303605" y="0.339869" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="sprite_jogar" sid="881561184924083">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="777389224773524" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.504951" original-source="D:\Google Drive\Dev-U\Artes\Quiz ENA\jogar.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="sprite_fundoliso" sid="153269449469226">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="636178731391940" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Google Drive\Dev-U\Artes\Quiz ENA\Fundo Liso.jpg" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="sprite_balao_nome" sid="729248352463705">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="388903260272669" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Google Drive\Dev-U\Artes\Quiz ENA\balao_nome.png">
+                        <collision-poly>
+                            <point x="0.00807636" y="0.003663" />
+                            <point x="0.977239" y="0.003663" />
+                            <point x="0.999266" y="0.377289" />
+                            <point x="0.998532" y="0.857143" />
+                            <point x="0.492658" y="0.882784" />
+                            <point x="0.000734214" y="0.787546" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="sprite_balao" sid="462755015585530">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="381941263910671" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Google Drive\Dev-U\Artes\Quiz ENA\balao.png">
+                        <collision-poly>
+                            <point x="0.500073" y="0.00396827" />
+                            <point x="0.8875" y="0.165476" />
+                            <point x="0.979927" y="0.515873" />
+                            <point x="0.82042" y="0.678968" />
+                            <point x="0.625912" y="0.797619" />
+                            <point x="0.202993" y="0.742857" />
+                            <point x="0.020073" y="0.510317" />
+                            <point x="0.0950732" y="0.157143" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="sprite_quadro_ranking" sid="410102483087558">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="542349973188124" speed="5">
+                    <frame duration="1" hotspotX="0.0916667" hotspotY="0.395" original-source="D:\Google Drive\Dev-U\Artes\Quiz ENA\quadro_ranking.png">
+                        <collision-poly>
+                            <point x="0.00103306" y="0.807453" />
+                            <point x="0.0919421" y="0.00124224" />
+                            <point x="0.853306" y="0.00124224" />
+                            <point x="0.998967" y="0.395031" />
+                            <point x="0.998967" y="0.963975" />
+                            <point x="0.0919421" y="0.998758" />
+                            <point x="0.00103306" y="0.395031" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="sprite_nome_branco" sid="650131100657775">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="472588072520343" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.502825" original-source="D:\Google Drive\Dev-U\Artes\Quiz ENA\nome_branco.png">
+                        <collision-poly>
+                            <point x="0.156463" y="0.259887" />
+                            <point x="0.5" y="0.288136" />
+                            <point x="0.846939" y="0.254237" />
+                            <point x="0.914966" y="0.497175" />
+                            <point x="0.846939" y="0.745763" />
+                            <point x="0.129252" y="0.785311" />
+                            <point x="0.108844" y="0.497175" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="button_reiniciar_jogo" sid="888174029218362">
+            <plugin id="Button" />
+        </object-type>
+        <object-type name="sprite_BannerDevU" sid="467502658729755">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="859298286783050" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Google Drive\Dev-U\Artes\Banner Dev-U.jpg" />
+                </animation>
+            </animation-folder>
         </object-type>
     </object-folder>
     <families />

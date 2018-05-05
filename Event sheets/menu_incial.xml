@@ -81,7 +81,9 @@
         </event-block>
         <event-block sid="326983612117065">
             <conditions>
-                <condition id="0" name="On clicked" sid="816469211792876" type="button_comecar_jogo" />
+                <condition id="17" name="On tap object" sid="816469211792876" type="Touch">
+                    <param id="0" name="Object">sprite_balao</param>
+                </condition>
             </conditions>
             <actions />
             <sub-events>

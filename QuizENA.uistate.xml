@@ -10,9 +10,8 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout order="4">MenuInicial</layout>
-        <layout order="5">Jogo</layout>
-        <event-sheet active="1" order="0">main_events</event-sheet>
+        <layout active="1" order="4">GameOver</layout>
+        <event-sheet order="0">main_events</event-sheet>
         <event-sheet order="1">menu_incial</event-sheet>
         <event-sheet order="2">game_over</event-sheet>
         <event-sheet order="3">global</event-sheet>
@@ -32,7 +31,15 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="sound-folder/" />
         <folder expanded="1" path="music-folder/" />
         <folder expanded="0" path="file-folder/Icons/" />
-        <folder expanded="1" path="animation-folder/sprite_titulo_jogo/" />
         <folder expanded="1" path="animation-folder/Sprite/" />
+        <folder expanded="1" path="animation-folder/sprite_logo/" />
+        <folder expanded="1" path="animation-folder/sprite_ranking/" />
+        <folder expanded="1" path="animation-folder/sprite_jogar/" />
+        <folder expanded="1" path="animation-folder/sprite_fundoliso/" />
+        <folder expanded="1" path="animation-folder/sprite_balao_nome/" />
+        <folder expanded="1" path="animation-folder/sprite_balao/" />
+        <folder expanded="1" path="animation-folder/sprite_quadro_ranking/" />
+        <folder expanded="1" path="animation-folder/sprite_nome_branco/" />
+        <folder expanded="1" path="animation-folder/sprite_BannerDevU/" />
     </folders-expanded>
 </c2uistate>
