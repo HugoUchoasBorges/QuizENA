@@ -13,6 +13,12 @@
                     <param id="0" name="Name">&quot;pegaQuestaoAleatoria&quot;</param>
                     <param id="1" name="Parameter {n}"></param>
                 </action>
+                <action id="0" name="Play" sid="580336309370349" type="Audio">
+                    <param id="0" name="Audio file">Musica Quiz</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">-10</param>
+                    <param id="1" name="Tag (optional)">&quot;musicaquiz&quot;</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="917737217597947">
@@ -93,6 +99,16 @@
             <actions>
                 <action id="0" name="Set text" sid="121599221721568" type="text_tempo">
                     <param id="0" name="Text">text_tempo.number_minuto&amp;&quot;min &quot; &amp;text_tempo.number_segundo&amp;&quot;seg&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="337846052812676">
+            <conditions>
+                <condition id="-3" name="On end of layout" sid="872912752362531" type="System" />
+            </conditions>
+            <actions>
+                <action id="6" name="Stop" sid="527582646825350" type="Audio">
+                    <param id="0" name="Tag">&quot;musicaquiz&quot;</param>
                 </action>
             </actions>
         </event-block>

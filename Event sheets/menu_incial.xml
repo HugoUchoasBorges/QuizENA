@@ -16,6 +16,12 @@
                     <param id="0" name="Name">&quot;insereHighscore&quot;</param>
                     <param id="1" name="Parameter {n}"></param>
                 </action>
+                <action id="0" name="Play" sid="711530838925025" type="Audio">
+                    <param id="0" name="Audio file">Musica Inicio</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">-10</param>
+                    <param id="1" name="Tag (optional)">&quot;musicainicio&quot;</param>
+                </action>
             </actions>
             <sub-events>
                 <event-block any="1" sid="307590630148742">
@@ -125,6 +131,16 @@
             <actions>
                 <action id="12" name="Download" sid="358864981703269" type="array_informacao_jogadores">
                     <param id="0" name="Filename">&quot;highscore.json&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="269702871535775">
+            <conditions>
+                <condition id="-3" name="On end of layout" sid="234621236754133" type="System" />
+            </conditions>
+            <actions>
+                <action id="6" name="Stop" sid="790767531025378" type="Audio">
+                    <param id="0" name="Tag">&quot;musicainicio&quot;</param>
                 </action>
             </actions>
         </event-block>
