@@ -19,6 +19,7 @@
         <variable comment="Guarda a quantidade de questões fáceis" constant="0" name="number_quantidade_questoes_faceis" sid="923339058335075" static="0" type="number">0</variable>
         <variable comment="Guarda a quantidade de questões médias" constant="0" name="number_quantidade_questoes_medias" sid="393572646841406" static="0" type="number">0</variable>
         <variable comment="Guarda a quantidade de questões difíceis" constant="0" name="number_quantidade_questoes_dificeis" sid="586189262229897" static="0" type="number">0</variable>
+        <variable comment="Guarda a um numero de questão aleatória" constant="0" name="number_questao_aleatoria" sid="849656083502021" static="0" type="number">0</variable>
         <comment>Aqui serão preenchidos os elementos na tela com as questões do arquivo lido</comment>
         <event-block sid="435156784326560">
             <conditions>
@@ -56,21 +57,56 @@
                 <event-block sid="864843364077385">
                     <conditions />
                     <actions>
+                        <action id="5" name="Push" sid="300661207474845" type="array_alternativas">
+                            <param id="0" name="Where">0</param>
+                            <param id="1" name="Value">1</param>
+                            <param id="2" name="Axis">0</param>
+                        </action>
+                        <action id="5" name="Push" sid="405096803874119" type="array_alternativas">
+                            <param id="0" name="Where">0</param>
+                            <param id="1" name="Value">2</param>
+                            <param id="2" name="Axis">0</param>
+                        </action>
+                        <action id="5" name="Push" sid="219560341373384" type="array_alternativas">
+                            <param id="0" name="Where">0</param>
+                            <param id="1" name="Value">3</param>
+                            <param id="2" name="Axis">0</param>
+                        </action>
                         <action id="0" name="Set text" sid="474790518718965" type="text_questao">
                             <param id="0" name="Text">RegexReplace(tokenat(array_questoes.At(number_valor_aleatorio), 0, &quot;;&quot;),&quot;(\r\n\t|\n|\r\t)&quot;,&quot;&quot;,&quot;&quot;)</param>
                         </action>
+                        <action id="-9" name="Set value" sid="294714344404066" type="System">
+                            <param id="0" name="Variable">number_questao_aleatoria</param>
+                            <param id="1" name="Value">choose(0,1,2)</param>
+                        </action>
                         <action id="0" name="Set text" sid="179333681961040" type="text_alternativa1">
-                            <param id="0" name="Text">RegexReplace(tokenat(array_questoes.At(number_valor_aleatorio), 1, &quot;;&quot;),&quot;(\r\n\t|\n|\r\t)&quot;,&quot;&quot;,&quot;&quot;)</param>
+                            <param id="0" name="Text">RegexReplace(tokenat(array_questoes.At(number_valor_aleatorio), array_alternativas.At(number_questao_aleatoria), &quot;;&quot;),&quot;(\r\n\t|\n|\r\t)&quot;,&quot;&quot;,&quot;&quot;)</param>
+                        </action>
+                        <action id="9" name="Delete" sid="245480677235939" type="array_alternativas">
+                            <param id="0" name="Index">number_questao_aleatoria</param>
+                            <param id="1" name="Axis">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="311691815987602" type="System">
+                            <param id="0" name="Variable">number_questao_aleatoria</param>
+                            <param id="1" name="Value">choose(0,1)</param>
                         </action>
                         <action id="0" name="Set text" sid="790235849672463" type="text_alternativa2">
-                            <param id="0" name="Text">RegexReplace(tokenat(array_questoes.At(number_valor_aleatorio), 2, &quot;;&quot;),&quot;(\r\n\t|\n|\r\t)&quot;,&quot;&quot;,&quot;&quot;)</param>
+                            <param id="0" name="Text">RegexReplace(tokenat(array_questoes.At(number_valor_aleatorio), array_alternativas.At(number_questao_aleatoria), &quot;;&quot;),&quot;(\r\n\t|\n|\r\t)&quot;,&quot;&quot;,&quot;&quot;)</param>
+                        </action>
+                        <action id="9" name="Delete" sid="611920538514987" type="array_alternativas">
+                            <param id="0" name="Index">number_questao_aleatoria</param>
+                            <param id="1" name="Axis">0</param>
                         </action>
                         <action id="0" name="Set text" sid="522002413649283" type="text_alternativa3">
-                            <param id="0" name="Text">RegexReplace(tokenat(array_questoes.At(number_valor_aleatorio), 3, &quot;;&quot;),&quot;(\r\n\t|\n|\r\t)&quot;,&quot;&quot;,&quot;&quot;)</param>
+                            <param id="0" name="Text">RegexReplace(tokenat(array_questoes.At(number_valor_aleatorio), array_alternativas.At(0), &quot;;&quot;),&quot;(\r\n\t|\n|\r\t)&quot;,&quot;&quot;,&quot;&quot;)</param>
                         </action>
                         <action id="-9" name="Set value" sid="574206218272229" type="System">
                             <param id="0" name="Variable">text_resposta_atual</param>
                             <param id="1" name="Value">RegexReplace(tokenat(array_questoes.At(number_valor_aleatorio), 4, &quot;;&quot;),&quot;(\r\n\t|\n|\r\t)&quot;,&quot;&quot;,&quot;&quot;)</param>
+                        </action>
+                        <action id="9" name="Delete" sid="544335592238779" type="array_alternativas">
+                            <param id="0" name="Index">0</param>
+                            <param id="1" name="Axis">0</param>
                         </action>
                         <action id="0" name="Set text" sid="524883912555254" type="text_num_questao">
                             <param id="0" name="Text">number_questao_atual &amp; &quot;/&quot; &amp; number_quantidade_fixa_questoes</param>
