@@ -6,7 +6,7 @@
         <variable comment="Indica se as questões já foram carregadas" constant="0" name="number_questoes_carregadas" sid="343660053085476" static="0" type="number">0</variable>
         <variable comment="Guarda o nome do player" constant="0" name="text_nome_player" sid="104961176069541" static="0" type="text"></variable>
         <variable comment="Guarda o valor (em pontos) de cada questão" constant="0" name="number_valor_questao" sid="217949242879373" static="0" type="number">50</variable>
-        <variable comment="Guarda a quantidade de questões da partida" constant="0" name="number_quantidade_fixa_questoes" sid="363682282865544" static="0" type="number">10</variable>
+        <variable comment="Guarda a quantidade de questões da partida" constant="0" name="number_quantidade_fixa_questoes" sid="363682282865544" static="0" type="number">100000</variable>
         <variable comment="Guarda a quantidade de acertos" constant="0" name="number_acertos" sid="792158276398595" static="0" type="number">0</variable>
         <variable comment="GUarda a quantidade de questões no banco " constant="0" name="number_quantidade_total_questoes" sid="806636620557155" static="0" type="number">0</variable>
         <variable comment="Guarda o número da questão atual" constant="0" name="number_questao_atual" sid="764372682975770" static="0" type="number">1</variable>
@@ -14,6 +14,7 @@
         <variable comment="Guarda a quantidade de partidas completadas" constant="0" name="number_quantidade_partidas" sid="278528031398075" static="0" type="number">0</variable>
         <variable comment="Guarda a resposta da pergunta atual" constant="0" name="text_resposta_atual" sid="293674312418239" static="0" type="text"></variable>
         <variable comment="Guarda um número aleatório" constant="0" name="number_valor_aleatorio" sid="929924624816861" static="0" type="number">0</variable>
+        <variable comment="Guarda a altura de uma linha escrita para as alternativas" constant="0" name="number_altura_linha" sid="996724825820618" static="0" type="number">55</variable>
         <variable comment="Guarda a quantidade de questões no banco na rodada" constant="0" name="number_quantidade_questoes_rodada" sid="548830552442516" static="0" type="number">0</variable>
         <variable comment="Guarda a quantidade de questões fáceis" constant="0" name="number_quantidade_questoes_faceis" sid="923339058335075" static="0" type="number">0</variable>
         <variable comment="Guarda a quantidade de questões médias" constant="0" name="number_quantidade_questoes_medias" sid="393572646841406" static="0" type="number">0</variable>
@@ -56,23 +57,26 @@
                     <conditions />
                     <actions>
                         <action id="0" name="Set text" sid="474790518718965" type="text_questao">
-                            <param id="0" name="Text">tokenat(array_questoes.At(number_valor_aleatorio), 0, &quot;;&quot;)</param>
+                            <param id="0" name="Text">RegexReplace(tokenat(array_questoes.At(number_valor_aleatorio), 0, &quot;;&quot;),&quot;(\r\n\t|\n|\r\t)&quot;,&quot;&quot;,&quot;&quot;)</param>
                         </action>
                         <action id="0" name="Set text" sid="179333681961040" type="text_alternativa1">
-                            <param id="0" name="Text">tokenat(array_questoes.At(number_valor_aleatorio), 1, &quot;;&quot;)</param>
+                            <param id="0" name="Text">RegexReplace(tokenat(array_questoes.At(number_valor_aleatorio), 1, &quot;;&quot;),&quot;(\r\n\t|\n|\r\t)&quot;,&quot;&quot;,&quot;&quot;)</param>
                         </action>
                         <action id="0" name="Set text" sid="790235849672463" type="text_alternativa2">
-                            <param id="0" name="Text">tokenat(array_questoes.At(number_valor_aleatorio), 2, &quot;;&quot;)</param>
+                            <param id="0" name="Text">RegexReplace(tokenat(array_questoes.At(number_valor_aleatorio), 2, &quot;;&quot;),&quot;(\r\n\t|\n|\r\t)&quot;,&quot;&quot;,&quot;&quot;)</param>
                         </action>
                         <action id="0" name="Set text" sid="522002413649283" type="text_alternativa3">
-                            <param id="0" name="Text">tokenat(array_questoes.At(number_valor_aleatorio), 3, &quot;;&quot;)</param>
+                            <param id="0" name="Text">RegexReplace(tokenat(array_questoes.At(number_valor_aleatorio), 3, &quot;;&quot;),&quot;(\r\n\t|\n|\r\t)&quot;,&quot;&quot;,&quot;&quot;)</param>
                         </action>
                         <action id="-9" name="Set value" sid="574206218272229" type="System">
                             <param id="0" name="Variable">text_resposta_atual</param>
-                            <param id="1" name="Value">tokenat(array_questoes.At(number_valor_aleatorio), 4, &quot;;&quot;)</param>
+                            <param id="1" name="Value">RegexReplace(tokenat(array_questoes.At(number_valor_aleatorio), 4, &quot;;&quot;),&quot;(\r\n\t|\n|\r\t)&quot;,&quot;&quot;,&quot;&quot;)</param>
                         </action>
                         <action id="0" name="Set text" sid="524883912555254" type="text_num_questao">
                             <param id="0" name="Text">number_questao_atual &amp; &quot;/&quot; &amp; number_quantidade_fixa_questoes</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="282503727965979" type="System">
+                            <param id="0" name="Seconds">1*dt</param>
                         </action>
                         <action id="-15" name="Set visible" sid="488618747590154" type="sprite_fundoanime">
                             <param id="0" name="Visibility">0</param>
@@ -85,6 +89,31 @@
                         </action>
                         <action id="-15" name="Set visible" sid="644966523762569" type="sprite_fundoliso">
                             <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="3" name="Set font size" sid="276580352502812" type="text_alternativa1">
+                            <param id="0" name="Size (pt)">35</param>
+                        </action>
+                        <action id="3" name="Set font size" sid="327438528853575" type="text_alternativa2">
+                            <param id="0" name="Size (pt)">35</param>
+                        </action>
+                        <action id="3" name="Set font size" sid="596351112523833" type="text_alternativa3">
+                            <param id="0" name="Size (pt)">35</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="531531350353059" type="System">
+                            <param id="0" name="Seconds">1*dt</param>
+                        </action>
+                        <action id="0" name="Call function" sid="217739160126223" type="Function">
+                            <param id="0" name="Name">&quot;alinhaCaixas&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="5" name="Set frame" sid="872454243021952" type="sprite_BoxAlternativa1">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="949318790281724" type="sprite_BoxAlternativa2">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="710197436235666" type="sprite_BoxAlternativa3">
+                            <param id="0" name="Frame number">0</param>
                         </action>
                     </actions>
                     <sub-events>
@@ -193,6 +222,98 @@
                 </event-block>
             </sub-events>
         </event-block>
+        <event-block sid="799729034605113">
+            <conditions>
+                <condition id="0" name="On function" sid="826330248768655" type="Function">
+                    <param id="0" name="Name">&quot;alinhaCaixas&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block any="1" sid="776398558803539">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="788643158025999" type="System">
+                            <param id="0" name="First value">text_alternativa1.TextHeight</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Second value">number_altura_linha</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="3" name="Set font size" sid="932197358841885" type="text_alternativa1">
+                            <param id="0" name="Size (pt)">25</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block any="1" sid="718917192528463">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="341518131246428" type="System">
+                            <param id="0" name="First value">text_alternativa2.TextHeight</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Second value">number_altura_linha</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="3" name="Set font size" sid="649718604024734" type="text_alternativa2">
+                            <param id="0" name="Size (pt)">25</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block any="1" sid="414276281981588">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="549265756797009" type="System">
+                            <param id="0" name="First value">text_alternativa3.TextHeight</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Second value">number_altura_linha</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="3" name="Set font size" sid="715198295482942" type="text_alternativa3">
+                            <param id="0" name="Size (pt)">25</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="829932239203059">
+                    <conditions />
+                    <actions>
+                        <action id="-16" name="Wait" sid="982365991229879" type="System">
+                            <param id="0" name="Seconds">1*dt</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="542726074851820" type="sprite_BoxPergunta">
+                            <param id="0" name="Width">text_questao.TextWidth + 100</param>
+                            <param id="1" name="Height">text_questao.TextHeight + 100</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="732352527663204" type="sprite_BoxPergunta">
+                            <param id="0" name="X">text_questao.X</param>
+                            <param id="1" name="Y">text_questao.Y</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="801711299923416" type="sprite_BoxAlternativa1">
+                            <param id="0" name="Width">text_alternativa1.Width</param>
+                            <param id="1" name="Height">text_alternativa1.TextHeight + 30</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="612551137934853" type="sprite_BoxAlternativa1">
+                            <param id="0" name="X">text_alternativa1.X</param>
+                            <param id="1" name="Y">text_alternativa1.Y</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="826591888685051" type="sprite_BoxAlternativa2">
+                            <param id="0" name="Width">text_alternativa2.Width</param>
+                            <param id="1" name="Height">text_alternativa2.TextHeight + 30</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="916542077934286" type="sprite_BoxAlternativa2">
+                            <param id="0" name="X">text_alternativa2.X</param>
+                            <param id="1" name="Y">text_alternativa2.Y</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="279046693253908" type="sprite_BoxAlternativa3">
+                            <param id="0" name="Width">text_alternativa3.Width</param>
+                            <param id="1" name="Height">text_alternativa3.TextHeight + 30</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="492114880670917" type="sprite_BoxAlternativa3">
+                            <param id="0" name="X">text_alternativa3.X</param>
+                            <param id="1" name="Y">text_alternativa3.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
         <comment>Busca uma questão por nível (passando parâmetro)</comment>
         <event-block sid="132802822503070">
             <conditions>
@@ -220,6 +341,76 @@
                 </event-block>
             </sub-events>
         </event-block>
+        <event-block sid="776818907965673">
+            <conditions>
+                <condition id="0" name="On function" sid="982429747928553" type="Function">
+                    <param id="0" name="Name">&quot;pintaRespostas&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="331149555500550">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="736265242436906" type="System">
+                            <param id="0" name="Variable">text_resposta_atual</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">text_alternativa1.Text</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="424834570515849" type="sprite_BoxAlternativa1">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="759868988025093" type="sprite_BoxAlternativa2">
+                            <param id="0" name="Frame number">2</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="608350860559589" type="sprite_BoxAlternativa3">
+                            <param id="0" name="Frame number">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="515153659049312">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="242264499567007" type="System">
+                            <param id="0" name="Variable">text_resposta_atual</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">text_alternativa2.Text</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="902964800182501" type="sprite_BoxAlternativa1">
+                            <param id="0" name="Frame number">2</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="767918130813055" type="sprite_BoxAlternativa2">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="468887633980501" type="sprite_BoxAlternativa3">
+                            <param id="0" name="Frame number">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="796796660562250">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="731938436950343" type="System">
+                            <param id="0" name="Variable">text_resposta_atual</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">text_alternativa3.Text</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="808067601922936" type="sprite_BoxAlternativa1">
+                            <param id="0" name="Frame number">2</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="641885002454733" type="sprite_BoxAlternativa2">
+                            <param id="0" name="Frame number">2</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="321575518450697" type="sprite_BoxAlternativa3">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
         <comment>Método para chegar se a resposta selecionada está correta, chamar a próxima questão ou terminar o jogo</comment>
         <event-block sid="774929900629395">
             <conditions>
@@ -227,7 +418,12 @@
                     <param id="0" name="Name">&quot;checarResposta&quot;</param>
                 </condition>
             </conditions>
-            <actions />
+            <actions>
+                <action id="0" name="Call function" sid="714686182672716" type="Function">
+                    <param id="0" name="Name">&quot;pintaRespostas&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
             <sub-events>
                 <event-block sid="945871485636855">
                     <conditions>
@@ -295,7 +491,7 @@
                     <conditions />
                     <actions>
                         <action id="-16" name="Wait" sid="512178966057981" type="System">
-                            <param id="0" name="Seconds">0</param>
+                            <param id="0" name="Seconds">0.5</param>
                         </action>
                         <action id="9" name="Delete" sid="837515466411697" type="array_questoes">
                             <param id="0" name="Index">number_valor_aleatorio</param>
@@ -331,22 +527,9 @@
                                 <condition id="-22" name="Else" sid="144319500325014" type="System" />
                             </conditions>
                             <actions>
-                                <action id="5" name="Push" sid="484365911875881" type="array_informacao_jogadores">
-                                    <param id="0" name="Where">1</param>
-                                    <param id="1" name="Value">number_pontuacao</param>
-                                    <param id="2" name="Axis">0</param>
-                                </action>
-                                <action id="3" name="Set at XY" sid="443879162259631" type="array_informacao_jogadores">
-                                    <param id="0" name="X">0</param>
-                                    <param id="1" name="Y">1</param>
-                                    <param id="2" name="Value">text_nome_player</param>
-                                </action>
-                                <action id="-10" name="Add to" sid="301887264504621" type="System">
-                                    <param id="0" name="Variable">number_quantidade_partidas</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                                <action id="-2" name="Go to layout" sid="224826594216362" type="System">
-                                    <param id="0" name="Layout">GameOver</param>
+                                <action id="0" name="Call function" sid="962267987616718" type="Function">
+                                    <param id="0" name="Name">&quot;fim_de_jogo&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
                                 </action>
                             </actions>
                         </event-block>
@@ -602,6 +785,32 @@
                     </actions>
                 </event-block>
             </sub-events>
+        </event-block>
+        <event-block sid="452097401573510">
+            <conditions>
+                <condition id="0" name="On function" sid="629265489839883" type="Function">
+                    <param id="0" name="Name">&quot;fim_de_jogo&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Push" sid="484365911875881" type="array_informacao_jogadores">
+                    <param id="0" name="Where">1</param>
+                    <param id="1" name="Value">number_pontuacao</param>
+                    <param id="2" name="Axis">0</param>
+                </action>
+                <action id="3" name="Set at XY" sid="443879162259631" type="array_informacao_jogadores">
+                    <param id="0" name="X">0</param>
+                    <param id="1" name="Y">1</param>
+                    <param id="2" name="Value">text_nome_player</param>
+                </action>
+                <action id="-10" name="Add to" sid="301887264504621" type="System">
+                    <param id="0" name="Variable">number_quantidade_partidas</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="224826594216362" type="System">
+                    <param id="0" name="Layout">GameOver</param>
+                </action>
+            </actions>
         </event-block>
     </events>
 </c2eventsheet>

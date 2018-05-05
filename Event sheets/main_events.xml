@@ -67,30 +67,28 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="-11" name="Add to" sid="798574366719948" type="text_tempo">
+                <action id="-12" name="Subtract from" sid="798574366719948" type="text_tempo">
                     <param id="0" name="Instance variable">number_segundo</param>
                     <param id="1" name="Value">1</param>
                 </action>
             </actions>
-        </event-block>
-        <event-block sid="411519507264034">
-            <conditions>
-                <condition id="-7" name="Compare instance variable" sid="523556628783285" type="text_tempo">
-                    <param id="0" name="Instance variable">number_segundo</param>
-                    <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">60</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-11" name="Add to" sid="399607511712655" type="text_tempo">
-                    <param id="0" name="Instance variable">number_minuto</param>
-                    <param id="1" name="Value">1</param>
-                </action>
-                <action id="-10" name="Set value" sid="989136084493614" type="text_tempo">
-                    <param id="0" name="Instance variable">number_segundo</param>
-                    <param id="1" name="Value">0</param>
-                </action>
-            </actions>
+            <sub-events>
+                <event-block sid="749661284069460">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="531561826075662" type="text_tempo">
+                            <param id="0" name="Instance variable">number_segundo</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="371039331943540" type="Function">
+                            <param id="0" name="Name">&quot;fim_de_jogo&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
         <event-block sid="297224989204428">
             <conditions>
@@ -98,7 +96,7 @@
             </conditions>
             <actions>
                 <action id="0" name="Set text" sid="121599221721568" type="text_tempo">
-                    <param id="0" name="Text">text_tempo.number_minuto&amp;&quot;min &quot; &amp;text_tempo.number_segundo&amp;&quot;seg&quot;</param>
+                    <param id="0" name="Text">text_tempo.number_segundo</param>
                 </action>
             </actions>
         </event-block>
