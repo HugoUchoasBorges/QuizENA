@@ -351,7 +351,6 @@
                 </action>
             </actions>
             <sub-events>
-                <variable comment="Pergunta temporaria" constant="0" name="text_pergunta_temp" sid="464393987577340" static="0" type="text">pergunta</variable>
                 <variable comment="contador" constant="0" name="i" sid="498647254583753" static="0" type="number">0</variable>
                 <event-block sid="932924293708288">
                     <conditions>
@@ -371,6 +370,11 @@
                             <param id="0" name="X">i</param>
                             <param id="1" name="Y">1</param>
                             <param id="2" name="Value">int(tokenat(array_questoes.At(i,0), 5, &quot;;&quot;))</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="743862176348397" type="array_questoes">
+                            <param id="0" name="X">i</param>
+                            <param id="1" name="Y">2</param>
+                            <param id="2" name="Value">tokenat(array_questoes.At(i,0), 6, &quot;;&quot;)</param>
                         </action>
                     </actions>
                     <sub-events>
@@ -493,7 +497,7 @@
                         </action>
                         <action id="1" name="Set size" sid="712211288205778" type="array_questoes">
                             <param id="0" name="Width">number_quantidade_total_questoes</param>
-                            <param id="1" name="Height">2</param>
+                            <param id="1" name="Height">3</param>
                             <param id="2" name="Depth">1</param>
                         </action>
                         <action id="-9" name="Set value" sid="672989278726932" type="System">
