@@ -74,7 +74,77 @@
                         <action id="0" name="Set text" sid="524883912555254" type="text_num_questao">
                             <param id="0" name="Text">number_questao_atual &amp; &quot;/&quot; &amp; number_quantidade_fixa_questoes</param>
                         </action>
+                        <action id="-15" name="Set visible" sid="488618747590154" type="sprite_fundoanime">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="276952939692762" type="sprite_fundogames">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="750860833167002" type="sprite_fundohq">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="644966523762569" type="sprite_fundoliso">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="230621672485282">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="463033009821593" type="System">
+                                    <param id="0" name="First value">find(array_questoes.At(number_valor_aleatorio,2), &quot;animes&quot;)</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Second value">-1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="878870084152150" type="sprite_fundoanime">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="532803115797145">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="977206650554812" type="System">
+                                    <param id="0" name="First value">find(array_questoes.At(number_valor_aleatorio,2), &quot;jogos&quot;)</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Second value">-1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="602150612704305" type="sprite_fundogames">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="976039888171798">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="434387919239418" type="System">
+                                    <param id="0" name="First value">find(array_questoes.At(number_valor_aleatorio,2), &quot;hqs&quot;)</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Second value">-1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="603019886934610" type="sprite_fundohq">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="534256344121371">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="426377200016219" type="System">
+                                    <param id="0" name="First value">find(array_questoes.At(number_valor_aleatorio,2), &quot;outros&quot;)</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Second value">-1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="877358921276581" type="sprite_fundoliso">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="389020470814132">
                     <conditions>
