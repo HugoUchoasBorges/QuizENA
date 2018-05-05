@@ -88,6 +88,23 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="610520822794679">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="203684467265680" type="text_tempo">
+                            <param id="0" name="Instance variable">number_segundo</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">10</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="385527536573499" type="Audio">
+                            <param id="0" name="Audio file">countdown</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
             </sub-events>
         </event-block>
         <event-block sid="297224989204428">
