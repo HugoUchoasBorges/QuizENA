@@ -34,6 +34,14 @@
                     <param id="0" name="Property name">&quot;background-color&quot;</param>
                     <param id="1" name="Value">&quot;rgba(0, 0, 0, 0.0)&quot;</param>
                 </action>
+                <action id="7" name="Set CSS style" sid="780628694730627" type="textbox_nome_jogador">
+                    <param id="0" name="Property name">&quot;font-size&quot;</param>
+                    <param id="1" name="Value">&quot;30px&quot;</param>
+                </action>
+                <action id="7" name="Set CSS style" sid="197475374564967" type="textbox_nome_jogador">
+                    <param id="0" name="Property name">&quot;vertical-align&quot;</param>
+                    <param id="1" name="Value">&quot;middle&quot;</param>
+                </action>
             </actions>
             <sub-events>
                 <event-block any="1" sid="307590630148742">

@@ -479,6 +479,25 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="sprite_nome" sid="750613177382453">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="182790862656166" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Google Drive\Dev-U\Artes\Quiz ENA\balao.png">
+                        <collision-poly>
+                            <point x="0.500073" y="0.00396827" />
+                            <point x="0.8875" y="0.165476" />
+                            <point x="0.979927" y="0.515873" />
+                            <point x="0.82042" y="0.678968" />
+                            <point x="0.625912" y="0.797619" />
+                            <point x="0.202993" y="0.742857" />
+                            <point x="0.020073" y="0.510317" />
+                            <point x="0.0950732" y="0.157143" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
