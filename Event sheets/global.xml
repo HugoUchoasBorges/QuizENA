@@ -242,6 +242,9 @@
                                 </condition>
                             </conditions>
                             <actions>
+                                <action id="5" name="Set frame" sid="483451201783681" type="sprite_fundoanime">
+                                    <param id="0" name="Frame number">choose(0,1,2,3)</param>
+                                </action>
                                 <action id="-15" name="Set visible" sid="878870084152150" type="sprite_fundoanime">
                                     <param id="0" name="Visibility">1</param>
                                 </action>
@@ -256,6 +259,9 @@
                                 </condition>
                             </conditions>
                             <actions>
+                                <action id="5" name="Set frame" sid="510052409892366" type="sprite_fundogames">
+                                    <param id="0" name="Frame number">choose(0,1,2,3)</param>
+                                </action>
                                 <action id="-15" name="Set visible" sid="602150612704305" type="sprite_fundogames">
                                     <param id="0" name="Visibility">1</param>
                                 </action>
@@ -270,6 +276,9 @@
                                 </condition>
                             </conditions>
                             <actions>
+                                <action id="5" name="Set frame" sid="873910017001557" type="sprite_fundohq">
+                                    <param id="0" name="Frame number">choose(0,1,2)</param>
+                                </action>
                                 <action id="-15" name="Set visible" sid="603019886934610" type="sprite_fundohq">
                                     <param id="0" name="Visibility">1</param>
                                 </action>
