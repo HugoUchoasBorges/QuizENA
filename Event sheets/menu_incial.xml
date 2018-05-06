@@ -22,6 +22,18 @@
                     <param id="3" name="Volume">-10</param>
                     <param id="1" name="Tag (optional)">&quot;musicainicio&quot;</param>
                 </action>
+                <action id="7" name="Set CSS style" sid="837336625708675" type="textbox_highscore">
+                    <param id="0" name="Property name">&quot;font-size&quot;</param>
+                    <param id="1" name="Value">&quot;35px&quot;</param>
+                </action>
+                <action id="7" name="Set CSS style" sid="820524284779431" type="textbox_highscore">
+                    <param id="0" name="Property name">&quot;color&quot;</param>
+                    <param id="1" name="Value">&quot;white&quot;</param>
+                </action>
+                <action id="7" name="Set CSS style" sid="280669710434525" type="textbox_highscore">
+                    <param id="0" name="Property name">&quot;background-color&quot;</param>
+                    <param id="1" name="Value">&quot;rgba(0, 0, 0, 0.0)&quot;</param>
+                </action>
             </actions>
             <sub-events>
                 <event-block any="1" sid="307590630148742">
