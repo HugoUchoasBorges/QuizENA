@@ -34,6 +34,10 @@
                     <param id="0" name="Variable">number_valor_aleatorio</param>
                     <param id="1" name="Value">round(random(0, ( array_questoes.Width -1)))</param>
                 </action>
+                <action id="-9" name="Set value" sid="125863925983229" type="System">
+                    <param id="0" name="Variable">number_valor_aleatorio</param>
+                    <param id="1" name="Value">((round(random(number_questao_atual, ( array_questoes.Width -1)))* round(random(0, number_pontuacao))) + round(random(0, ( array_questoes.Width -1)))) % array_questoes.Width</param>
+                </action>
                 <action id="-15" name="Set visible" sid="703397356341314" type="text_tempo_extra">
                     <param id="0" name="Visibility">0</param>
                 </action>
@@ -495,39 +499,12 @@
                     </actions>
                     <sub-events>
                         <comment>Ponto extra para cada 3 acertos</comment>
-                        <event-block sid="417944414078379">
-                            <conditions>
-                                <condition id="-14" name="Compare variable" sid="160523650528436" type="System">
-                                    <param id="0" name="Variable">number_contador_resposta_certa</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">3</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-11" name="Add to" sid="783066007447667" type="text_tempo">
-                                    <param id="0" name="Instance variable">number_segundo</param>
-                                    <param id="1" name="Value">8</param>
-                                </action>
-                                <action id="0" name="Set text" sid="326827680796856" type="text_tempo_extra">
-                                    <param id="0" name="Text">&quot;+8&quot;</param>
-                                </action>
-                                <action id="4" name="Set font color" sid="512342429290209" type="text_tempo_extra">
-                                    <param id="0" name="Color">rgb(0, 255, 0)</param>
-                                </action>
-                                <action id="-15" name="Set visible" sid="806612301334228" type="text_tempo_extra">
-                                    <param id="0" name="Visibility">1</param>
-                                </action>
-                                <action id="5" name="Set frame" sid="627064948095027" type="sprite_box_tempo">
-                                    <param id="0" name="Frame number">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
                         <event-block sid="609890258255141">
                             <conditions>
-                                <condition id="-14" name="Compare variable" sid="350290346498299" type="System">
-                                    <param id="0" name="Variable">number_contador_resposta_certa</param>
+                                <condition id="-8" name="Compare two values" sid="350290346498299" type="System">
+                                    <param id="0" name="First value">number_contador_resposta_certa % 6</param>
                                     <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">6</param>
+                                    <param id="2" name="Second value">0</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -570,6 +547,22 @@
                                 </action>
                                 <action id="-15" name="Set visible" sid="507723262682508" type="text_multiplicador">
                                     <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-11" name="Add to" sid="783066007447667" type="text_tempo">
+                                    <param id="0" name="Instance variable">number_segundo</param>
+                                    <param id="1" name="Value">8</param>
+                                </action>
+                                <action id="0" name="Set text" sid="326827680796856" type="text_tempo_extra">
+                                    <param id="0" name="Text">&quot;+8&quot;</param>
+                                </action>
+                                <action id="4" name="Set font color" sid="512342429290209" type="text_tempo_extra">
+                                    <param id="0" name="Color">rgb(0, 255, 0)</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="806612301334228" type="text_tempo_extra">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="627064948095027" type="sprite_box_tempo">
+                                    <param id="0" name="Frame number">1</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -862,26 +855,6 @@
                                     <param id="1" name="Value">1</param>
                                 </action>
                             </actions>
-                        </event-block>
-                        <event-block sid="425030901433816">
-                            <conditions>
-                                <condition id="-8" name="Compare two values" sid="188731381409604" type="System">
-                                    <param id="0" name="First value">array_questoes.At(i,1)</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Second value">2</param>
-                                </condition>
-                            </conditions>
-                            <actions />
-                        </event-block>
-                        <event-block sid="970736835324060">
-                            <conditions>
-                                <condition id="-8" name="Compare two values" sid="412737552141298" type="System">
-                                    <param id="0" name="First value">array_questoes.At(i,1)</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Second value">3</param>
-                                </condition>
-                            </conditions>
-                            <actions />
                         </event-block>
                         <event-block sid="427455481510037">
                             <conditions />
