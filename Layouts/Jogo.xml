@@ -457,7 +457,7 @@
                         <line-height>0</line-height>
                     </properties>
                     <instance-variables>
-                        <number_segundo>1</number_segundo>
+                        <number_segundo>60</number_segundo>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>

@@ -11,7 +11,7 @@ Bruce Banner;
 Haword Stark;
 Hank Pym;
 Hank Pym;
-2
+2;
 hqs;
 |
 Quantos Robins o Batman já teve ?;
@@ -176,7 +176,7 @@ animes;
 |
 Em Turma da Monica, qual o nome completo do personagem Piteco?;
 Australopitecos Souza;
-Homo Piteco Sapiens; 
+Homo Piteco Sapiens;
 Pithecanthropus Erectus da Silva;
 Pithecanthropus Erectus da Silva;
 3;
@@ -228,7 +228,7 @@ Quantos Hulks existem ?;
 15;
 15;
 3;
-hqs
+hqs;
 |
 Qual nome da arma empunhada por Bill Raio Beta,abençoado pelo propio Odin?;
 Jarnbjorn;
@@ -334,7 +334,7 @@ Laura Kinney;
 1;
 hqs;
 |
-Qual dos vilões pertencce a DC?
+Qual dos vilões pertencce a DC?;
 Conde Nefária;
 Mandarim;
 Antimonitor;
@@ -353,7 +353,7 @@ animes;
 Em Nanatsu no Taizai, qual desses não é irmão do Meliodas?;
 Zeldris;
 Estarossa;
-Fraudrin;  
+Fraudrin;
 Fraudrin;
 1;
 animes;
@@ -422,15 +422,15 @@ Hank Pym;
 2;
 hqs;
 |
-Qual a identidade do personagem Rosarch, dos quadrinhos Watchman?;
+Qual a identidade do personagem Rosarch, dos quadrinhos Watchmen?;
 Adrian Veidt;
 Charles Szasz;
-Walter Kovacs; 
+Walter Kovacs;
 Walter Kovacs;
 1;
 hqs;
 |
-No evento da DC, Crise dos Infinitos Mundos, dois personagens marcam a série por sua morte. Quem são?;
+No evento da DC, Crise dos Infinitos Mundos, dois personagens marcam a série com sua morte. Quem são?;
 Supergirl e Flash;
 Flash e Louis Lane;
 Ciborgue e Kid Flash;
@@ -607,7 +607,7 @@ Street Fighter II: The New Challengers;
 jogos;
 |
 Sephiroth mata qual personagem em Final Fantasy 7?;
-Tifa; 
+Tifa;
 Cloud;
 Aeris;
 Aeris;
@@ -654,11 +654,307 @@ Arstotzka;
 3;
 jogos;
 |
-Qual músico quase foi chamado para compor a música de Sonic 3?
+Qual músico quase foi chamado para compor a música de Sonic 3?;
 David Bowie;
 Mick Jagger;
 Michael Jackson;
 Michael Jackson;
+2;
+jogos;
+|
+Qual desses pokemons não aprendem surf?;
+Magikarp;
+Snorlax;
+Rhydon;
+Magikarp;
+2;
+jogos;
+|
+No inicio de Dragon Ball Z, qual desses lutadores é o que tinha menor poder de luta?;
+Kuririn;
+Tenshinham;
+Yancha;
+Kuririn;
+1;
+animes;
+|
+Qual o anime com mais episódios já produzido?;
+Crayon Shin-chan;
+Sazae-san;
+One Piece;
+Sazae-san;
+3;
+animes;
+|
+No anime "Your name", qual cidade a protagonista Mitsuha, sonha em morar?;
+Tóquio;
+Hiroshima;
+Sendai;
+Tóquio;
+2;
+animes;
+|
+Qual desses animes não passou na manchete?;
+Fly, o Pequeno Guerreiro;
+Yu Yu Hakusho;
+Super Campeões;
+Fly, o Pequeno Guerreiro;
+2;
+animes;
+|
+Em Harry Potter, qual a maior fobia de Rony Weasley?;
+Aranhas;
+Dementadores;
+Filch, o Zelador;
+Aranhas;
+1;
+outros;
+|
+Qual o patrono do Professor Snape em Harry Potter?;
+Corça;
+Cavalo;
+Unicórnio;
+Corça;
+3;
+outros;
+|
+Qual o ano de lançamento do filme "De volta para o Futuro"?;
+1985;
+1987;
+1989;
+1985;
+2;
+outros;
+|
+Qual a arma do Eric do desenho "Caverna do Dragão"?;
+Escudo;
+Tacape Mágico;
+Arco;
+Escudo;
+2;
+outros;
+|
+O que sopra a cabeça preta do Tiamat, o Dragão de cinco cabeças do desenho "Caverna do Dragão"?;
+Ácido;
+Veneno;
+Fogo;
+Ácido;
+3;
+outros;
+|
+Qual o nome do Unicórnio do Caverna do Dragão?;
+Uni;
+Pé de Pano;
+Tônia;
+Uni;
+1;
+outros;
+|
+Quem foi o escritor das lendas de "Cthulhu Mythos"?;
+H.P. Lovecraft;
+J. R. R. Tolkien;
+Peter Jackson;
+H.P. Lovecraft;
+1;
+outros;
+|
+Qual a jóia guardada pelo Dr. Strange?;
+Tempo;
+Alma;
+Espaço;
+Tempo;
+1;
+hqs;
+|
+Qual a cor do uniforme do Mário?;
+Vermelho;
+Verde;
+Bordô;
+Vermelho;
+1;
+jogos;
+|
+Quem é Zelda?;
+Uma princesa;
+Um herói;
+Um cavalo;
+Uma princesa;
+1;
+jogos;
+|
+No livro "A invenção de Hugo Cabret", qual é a invenção deixada pelo pai da personagem?;
+Um autômato;
+Um cinematógrafo;
+Um relógio;
+Um autômato;
+2;
+outros;
+|
+Qual personagem da Turma da Mônica representa a filha de Maurício de Souza?;
+Mônica;
+Magali;
+Marina;
+Marina;
+1;
+hqs;
+|
+No anime "One Punch-Man", qual dessas alternativas representa preocupação de Saitama?;
+Não perder a promoção do mercadinho;
+Acabar com o mal do mundo;
+Dormir;
+Não perder a promoção do mercadinho;
+2;
+animes;
+|
+"Vampiro: a Máscara" é um:;
+Livro/Romance;
+Seriado;
+RPG de Mesa;
+RPG de Mesa;
+2;
+outros;
+|
+Achou que não ia ter pergunta sobre Choque de Cultura? Achou errado otário! Qual é o meio de transporte alternativo do Renan?;
+Kombi 94´;
+Strinter Azul e Vermelha;
+Towner Azul Bebê;
+Towner Azul Bebê;
+2;
+outros;
+|
+No anime FullMetall Alchemist qual alquimista federal é conhecido como "Alquimista das Chamas"?;
+Edward Elric;
+Major Armstrong;
+Roy Mustang;
+Roy Mustang;
+1;
+animes;
+|
+Qual o Cavaleiro do Zodíaco é considerado o mais próximo de Deus?;
+Aioria de Leão;
+Seya de Pegasus;
+Shaka de Virgem;
+Shaka de Virgem;
+2;
+animes;
+|
+Como Kratos se torna o Deus da Guerra?;
+Matando Zeus;
+Matando a Hydra;
+Matando Ares;
+Matando Ares;
+1;
+jogos;
+|
+O que Kratos é de Zeus?;
+Irmão;
+Sobrinho;
+Filho;
+Filho;
+1;
+jogos;
+|
+Qual o ataque de Milo de Escorpião?;
+Meteoro de Agulhas;
+Agulha Vermelha;
+Agulha Escarlate;
+Agulha Escarlate;
+2;
+animes;
+|
+Qual o longa metragem de Herói da DC rendeu mais dinheiro até hoje?;
+Batman Cavaleiro das Trevas Resurge;
+Liga da Justiça;
+Mulher Maravilha;
+Batman Cavaleiro das Trevas Resurge;
+2;
+hqs;
+|
+O que é a Dev-U?;
+Uma equipe de jogos;
+Uma equipe de nerds;
+Uma equipe de programação;
+Uma equipe de jogos;
+1;
+jogos;
+|
+Qual é a famosa frase dos guardas de toda Skyrim?;
+"I used to be an adventurer like you, then i took an arrow in the knee";
+"Let me guess, someone stole your sweetroll?";
+"Someone better buy me a drink";
+"I used to be an adventurer like you, then i took an arrow in the knee";
+1;
+jogos;
+|
+Qual é o nome do primeiro amor de Wolverine?;
+Jean Grey;
+Rose O'Hara;
+Mariko Yashida;
+Rose O'Hara;
+3;
+hqs;
+|
+Quem é responsável pelo programa do soro do super soldado no universo Ultimate da Marvel?;
+Hank Pym;
+Tony Stark;
+Nick Fury;
+Hank Pym;
+2;
+hqs;
+|
+Quem é trazido de volta a vida em Surpreendentes X-men?;
+Colossus;
+Jean Grey;
+Professor X;
+Colossus;
+2;
+hqs;
+|
+Quem consegue fazer frente ao Hulk na saga Hulk Contra o Mundo?;
+Sentinela;
+Thor;
+Homem de Ferro;
+Sentinela;
+3;
+hqs;
+|
+Quem é o traidor infiltrado no grupo do Capitão América na saga Guerra Civil?;
+Luke Cage;
+Justiceiro;
+Tigresa;
+Tigresa;
+2;
+hqs;
+|
+Quem é o vilão que mata o  Superman?;
+Apocalipse;
+Darkseid;
+Lex Luthor;
+Apocalipse;
+1;
+hqs;
+|
+O verdadeiro nome de All Might é:;
+Toshinori Yagi;
+Nana Shimura;
+Shota Aizawa;
+Toshinori Yagi;
+2;
+animes;
+|
+Quantas estrelas existem em Super Mario 64?;
+110;
+90;
+120;
+120;
+1;
+jogos;
+|
+Qual o console mais vendido de todos os tempos?;
+Playstation 2;
+Nintendo Wii;
+Super Nintendo/Famicon;
+Playstation 2;
 2;
 jogos;
 |

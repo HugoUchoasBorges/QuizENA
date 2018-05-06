@@ -179,6 +179,15 @@
                                 <action id="3" name="Set font size" sid="693492188274169" type="text_alternativa1">
                                     <param id="0" name="Size (pt)">25</param>
                                 </action>
+                                <action id="3" name="Set font size" sid="802760671713717" type="text_alternativa2">
+                                    <param id="0" name="Size (pt)">25</param>
+                                </action>
+                                <action id="3" name="Set font size" sid="502800022459119" type="text_alternativa3">
+                                    <param id="0" name="Size (pt)">25</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="907427428026338" type="System">
+                                    <param id="0" name="Seconds">1*dt</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="616130123546376">
@@ -218,6 +227,9 @@
                                 <action id="-3" name="Set position" sid="571729929052796" type="sprite_BoxAlternativa3">
                                     <param id="0" name="X">text_alternativa3.X</param>
                                     <param id="1" name="Y">text_alternativa3.Y</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="952321420717650" type="System">
+                                    <param id="0" name="Seconds">1*dt</param>
                                 </action>
                             </actions>
                         </event-block>
