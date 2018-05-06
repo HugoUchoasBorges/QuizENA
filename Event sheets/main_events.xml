@@ -26,11 +26,20 @@
                 <condition id="3" name="On touched object" sid="510416794684842" type="Touch">
                     <param id="0" name="Object">text_alternativa1</param>
                 </condition>
+                <condition id="-14" name="Compare variable" sid="274819132521664" type="System">
+                    <param id="0" name="Variable">number_permite_clique</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
             </conditions>
             <actions>
                 <action id="0" name="Call function" sid="188929160097281" type="Function">
                     <param id="0" name="Name">&quot;checarResposta&quot;</param>
                     <param id="1" name="Parameter {n}">text_alternativa1.Text</param>
+                </action>
+                <action id="-9" name="Set value" sid="571676021883422" type="System">
+                    <param id="0" name="Variable">number_permite_clique</param>
+                    <param id="1" name="Value">0</param>
                 </action>
             </actions>
         </event-block>
@@ -39,11 +48,20 @@
                 <condition id="3" name="On touched object" sid="420447564402620" type="Touch">
                     <param id="0" name="Object">text_alternativa2</param>
                 </condition>
+                <condition id="-14" name="Compare variable" sid="874125017117391" type="System">
+                    <param id="0" name="Variable">number_permite_clique</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
             </conditions>
             <actions>
                 <action id="0" name="Call function" sid="334325850923990" type="Function">
                     <param id="0" name="Name">&quot;checarResposta&quot;</param>
                     <param id="1" name="Parameter {n}">text_alternativa2.Text</param>
+                </action>
+                <action id="-9" name="Set value" sid="783374638432525" type="System">
+                    <param id="0" name="Variable">number_permite_clique</param>
+                    <param id="1" name="Value">0</param>
                 </action>
             </actions>
         </event-block>
@@ -52,11 +70,20 @@
                 <condition id="3" name="On touched object" sid="456506931239233" type="Touch">
                     <param id="0" name="Object">text_alternativa3</param>
                 </condition>
+                <condition id="-14" name="Compare variable" sid="918291156595300" type="System">
+                    <param id="0" name="Variable">number_permite_clique</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
             </conditions>
             <actions>
                 <action id="0" name="Call function" sid="418892562891332" type="Function">
                     <param id="0" name="Name">&quot;checarResposta&quot;</param>
                     <param id="1" name="Parameter {n}">text_alternativa3.Text</param>
+                </action>
+                <action id="-9" name="Set value" sid="143429219732948" type="System">
+                    <param id="0" name="Variable">number_permite_clique</param>
+                    <param id="1" name="Value">0</param>
                 </action>
             </actions>
         </event-block>

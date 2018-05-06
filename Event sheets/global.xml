@@ -23,6 +23,7 @@
         <variable comment="Guarda a quantidade de questões médias" constant="0" name="number_quantidade_questoes_medias" sid="393572646841406" static="0" type="number">0</variable>
         <variable comment="Guarda a quantidade de questões difíceis" constant="0" name="number_quantidade_questoes_dificeis" sid="586189262229897" static="0" type="number">0</variable>
         <variable comment="Guarda a um numero de questão aleatória" constant="0" name="number_questao_aleatoria" sid="849656083502021" static="0" type="number">0</variable>
+        <variable comment="Variável para permitir ou não o clique nas alternativas" constant="0" name="number_permite_clique" sid="459527247110567" static="0" type="number">1</variable>
         <comment>Aqui serão preenchidos os elementos na tela com as questões do arquivo lido</comment>
         <event-block sid="435156784326560">
             <conditions>
@@ -141,9 +142,9 @@
                         <action id="-16" name="Wait" sid="531531350353059" type="System">
                             <param id="0" name="Seconds">1*dt</param>
                         </action>
-                        <action id="0" name="Call function" sid="217739160126223" type="Function">
-                            <param id="0" name="Name">&quot;alinhaCaixas&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
+                        <action id="-9" name="Set value" sid="601257812092086" type="System">
+                            <param id="0" name="Variable">number_permite_clique</param>
+                            <param id="1" name="Value">1</param>
                         </action>
                         <action id="5" name="Set frame" sid="872454243021952" type="sprite_BoxAlternativa1">
                             <param id="0" name="Frame number">0</param>
@@ -156,6 +157,70 @@
                         </action>
                     </actions>
                     <sub-events>
+                        <event-block any="1" sid="774907076250082">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="966125311742324" type="System">
+                                    <param id="0" name="First value">text_alternativa1.TextHeight</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Second value">number_altura_linha</param>
+                                </condition>
+                                <condition id="-8" name="Compare two values" sid="323871734713571" type="System">
+                                    <param id="0" name="First value">text_alternativa2.TextHeight</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Second value">number_altura_linha</param>
+                                </condition>
+                                <condition id="-8" name="Compare two values" sid="220970028027997" type="System">
+                                    <param id="0" name="First value">text_alternativa2.TextHeight</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Second value">number_altura_linha</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="3" name="Set font size" sid="693492188274169" type="text_alternativa1">
+                                    <param id="0" name="Size (pt)">25</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="616130123546376">
+                            <conditions />
+                            <actions>
+                                <action id="-16" name="Wait" sid="375164139438366" type="System">
+                                    <param id="0" name="Seconds">1*dt</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="312986867926329" type="sprite_BoxPergunta">
+                                    <param id="0" name="Width">text_questao.TextWidth + 100</param>
+                                    <param id="1" name="Height">text_questao.TextHeight + 100</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="827246663413602" type="sprite_BoxPergunta">
+                                    <param id="0" name="X">text_questao.X</param>
+                                    <param id="1" name="Y">text_questao.Y</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="939463540951732" type="sprite_BoxAlternativa1">
+                                    <param id="0" name="Width">text_alternativa1.Width</param>
+                                    <param id="1" name="Height">text_alternativa1.TextHeight + 30</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="222591597237726" type="sprite_BoxAlternativa1">
+                                    <param id="0" name="X">text_alternativa1.X</param>
+                                    <param id="1" name="Y">text_alternativa1.Y</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="886220995491213" type="sprite_BoxAlternativa2">
+                                    <param id="0" name="Width">text_alternativa2.Width</param>
+                                    <param id="1" name="Height">text_alternativa2.TextHeight + 30</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="875371750931025" type="sprite_BoxAlternativa2">
+                                    <param id="0" name="X">text_alternativa2.X</param>
+                                    <param id="1" name="Y">text_alternativa2.Y</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="152935658749136" type="sprite_BoxAlternativa3">
+                                    <param id="0" name="Width">text_alternativa3.Width</param>
+                                    <param id="1" name="Height">text_alternativa3.TextHeight + 30</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="571729929052796" type="sprite_BoxAlternativa3">
+                                    <param id="0" name="X">text_alternativa3.X</param>
+                                    <param id="1" name="Y">text_alternativa3.Y</param>
+                                </action>
+                            </actions>
+                        </event-block>
                         <event-block sid="230621672485282">
                             <conditions>
                                 <condition id="-8" name="Compare two values" sid="463033009821593" type="System">
@@ -256,98 +321,6 @@
                         <action id="-11" name="Subtract from" sid="835737740486472" type="System">
                             <param id="0" name="Variable">number_quantidade_questoes_dificeis</param>
                             <param id="1" name="Value">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
-        </event-block>
-        <event-block sid="799729034605113">
-            <conditions>
-                <condition id="0" name="On function" sid="826330248768655" type="Function">
-                    <param id="0" name="Name">&quot;alinhaCaixas&quot;</param>
-                </condition>
-            </conditions>
-            <actions />
-            <sub-events>
-                <event-block any="1" sid="776398558803539">
-                    <conditions>
-                        <condition id="-8" name="Compare two values" sid="788643158025999" type="System">
-                            <param id="0" name="First value">text_alternativa1.TextHeight</param>
-                            <param id="1" name="Comparison">4</param>
-                            <param id="2" name="Second value">number_altura_linha</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="3" name="Set font size" sid="932197358841885" type="text_alternativa1">
-                            <param id="0" name="Size (pt)">25</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block any="1" sid="718917192528463">
-                    <conditions>
-                        <condition id="-8" name="Compare two values" sid="341518131246428" type="System">
-                            <param id="0" name="First value">text_alternativa2.TextHeight</param>
-                            <param id="1" name="Comparison">4</param>
-                            <param id="2" name="Second value">number_altura_linha</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="3" name="Set font size" sid="649718604024734" type="text_alternativa2">
-                            <param id="0" name="Size (pt)">25</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block any="1" sid="414276281981588">
-                    <conditions>
-                        <condition id="-8" name="Compare two values" sid="549265756797009" type="System">
-                            <param id="0" name="First value">text_alternativa3.TextHeight</param>
-                            <param id="1" name="Comparison">4</param>
-                            <param id="2" name="Second value">number_altura_linha</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="3" name="Set font size" sid="715198295482942" type="text_alternativa3">
-                            <param id="0" name="Size (pt)">25</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="829932239203059">
-                    <conditions />
-                    <actions>
-                        <action id="-16" name="Wait" sid="982365991229879" type="System">
-                            <param id="0" name="Seconds">1*dt</param>
-                        </action>
-                        <action id="-7" name="Set size" sid="542726074851820" type="sprite_BoxPergunta">
-                            <param id="0" name="Width">text_questao.TextWidth + 100</param>
-                            <param id="1" name="Height">text_questao.TextHeight + 100</param>
-                        </action>
-                        <action id="-3" name="Set position" sid="732352527663204" type="sprite_BoxPergunta">
-                            <param id="0" name="X">text_questao.X</param>
-                            <param id="1" name="Y">text_questao.Y</param>
-                        </action>
-                        <action id="-7" name="Set size" sid="801711299923416" type="sprite_BoxAlternativa1">
-                            <param id="0" name="Width">text_alternativa1.Width</param>
-                            <param id="1" name="Height">text_alternativa1.TextHeight + 30</param>
-                        </action>
-                        <action id="-3" name="Set position" sid="612551137934853" type="sprite_BoxAlternativa1">
-                            <param id="0" name="X">text_alternativa1.X</param>
-                            <param id="1" name="Y">text_alternativa1.Y</param>
-                        </action>
-                        <action id="-7" name="Set size" sid="826591888685051" type="sprite_BoxAlternativa2">
-                            <param id="0" name="Width">text_alternativa2.Width</param>
-                            <param id="1" name="Height">text_alternativa2.TextHeight + 30</param>
-                        </action>
-                        <action id="-3" name="Set position" sid="916542077934286" type="sprite_BoxAlternativa2">
-                            <param id="0" name="X">text_alternativa2.X</param>
-                            <param id="1" name="Y">text_alternativa2.Y</param>
-                        </action>
-                        <action id="-7" name="Set size" sid="279046693253908" type="sprite_BoxAlternativa3">
-                            <param id="0" name="Width">text_alternativa3.Width</param>
-                            <param id="1" name="Height">text_alternativa3.TextHeight + 30</param>
-                        </action>
-                        <action id="-3" name="Set position" sid="492114880670917" type="sprite_BoxAlternativa3">
-                            <param id="0" name="X">text_alternativa3.X</param>
-                            <param id="1" name="Y">text_alternativa3.Y</param>
                         </action>
                     </actions>
                 </event-block>
