@@ -68,26 +68,6 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="193573809987993">
-                    <conditions>
-                        <condition id="-14" name="Compare variable" sid="362312956629996" type="System">
-                            <param id="0" name="Variable">number_quantidade_total_questoes</param>
-                            <param id="1" name="Comparison">1</param>
-                            <param id="2" name="Value">array_questoes.Width</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="1" name="Set size" sid="586771928733537" type="array_questoes">
-                            <param id="0" name="Width">number_quantidade_total_questoes</param>
-                            <param id="1" name="Height">1</param>
-                            <param id="2" name="Depth">1</param>
-                        </action>
-                        <action id="0" name="Call function" sid="829361093016260" type="Function">
-                            <param id="0" name="Name">&quot;preenchePerguntas&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
-                        </action>
-                    </actions>
-                </event-block>
             </sub-events>
         </event-block>
         <event-block sid="916153779881379">
