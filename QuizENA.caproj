@@ -175,8 +175,7 @@
         <object-type name="sprite_fundoliso" sid="153269449469226">
             <plugin id="Sprite" />
             <animation-folder>
-                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="636178731391940" speed="0">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="636178731391940" speed="0">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Google Drive\Dev-U\Artes\Quiz ENA\Fundo Liso.jpg" />
                 </animation>
             </animation-folder>
