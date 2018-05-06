@@ -11,11 +11,12 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     </configurations>
     <open-tabs>
         <layout order="4">MenuInicial</layout>
-        <layout order="5">Jogo</layout>
+        <layout active="1" order="5">Jogo</layout>
+        <layout order="6">GameOver</layout>
         <event-sheet order="0">main_events</event-sheet>
         <event-sheet order="1">menu_incial</event-sheet>
         <event-sheet order="2">game_over</event-sheet>
-        <event-sheet active="1" order="3">global</event-sheet>
+        <event-sheet order="3">global</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -41,7 +42,6 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/sprite_balao/" />
         <folder expanded="1" path="animation-folder/sprite_quadro_ranking/" />
         <folder expanded="1" path="animation-folder/sprite_nome_branco/" />
-        <folder expanded="1" path="animation-folder/sprite_BannerDevU/" />
         <folder expanded="1" path="animation-folder/sprite_fundoanime/" />
         <folder expanded="1" path="animation-folder/sprite_fundogames/" />
         <folder expanded="1" path="animation-folder/sprite_fundohq/" />
@@ -50,5 +50,8 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/sprite_BoxAlternativa2/" />
         <folder expanded="1" path="animation-folder/sprite_BoxAlternativa3/" />
         <folder expanded="1" path="animation-folder/sprite_box_geral/" />
+        <folder expanded="1" path="animation-folder/sprite_medalha/" />
+        <folder expanded="1" path="animation-folder/sprite_jogar_novamente/" />
+        <folder expanded="1" path="animation-folder/sprite_menu_inicial/" />
     </folders-expanded>
 </c2uistate>

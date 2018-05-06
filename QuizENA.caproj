@@ -108,9 +108,6 @@
         <object-type global="1" name="array_informacao_jogadores" sid="359707990407482">
             <plugin id="Arr" />
         </object-type>
-        <object-type name="button_voltar_menu" sid="457277914942580">
-            <plugin id="Button" />
-        </object-type>
         <object-type name="textbox_highscore" sid="399477154461044">
             <plugin id="TextBox" />
         </object-type>
@@ -121,9 +118,6 @@
             <plugin id="Text" />
         </object-type>
         <object-type name="text_acertos" sid="170008641251397">
-            <plugin id="Text" />
-        </object-type>
-        <object-type name="text_erros" sid="662140920029834">
             <plugin id="Text" />
         </object-type>
         <object-type name="text_classificacao" sid="858818638653604">
@@ -249,17 +243,6 @@
                             <point x="0.108844" y="0.497175" />
                         </collision-poly>
                     </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="button_reiniciar_jogo" sid="888174029218362">
-            <plugin id="Button" />
-        </object-type>
-        <object-type name="sprite_BannerDevU" sid="467502658729755">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="859298286783050" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Google Drive\Dev-U\Artes\Banner Dev-U.jpg" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -447,6 +430,54 @@
         </object-type>
         <object-type global="1" name="array_alternativas" sid="814253822170531">
             <plugin id="Arr" />
+        </object-type>
+        <object-type name="sprite_medalha" sid="294469992291725">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="3" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="147156053707515" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Google Drive\Dev-U\Artes\Quiz ENA\bronze.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="sprite_jogar_novamente" sid="894193204138611">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="626484612329786" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.50625" original-source="D:\Google Drive\Dev-U\Artes\Quiz ENA\jogar novamente.png">
+                        <collision-poly>
+                            <point x="0.491905" y="0.00434783" />
+                            <point x="0.848707" y="0.118478" />
+                            <point x="0.997509" y="0.382609" />
+                            <point x="0.885536" y="0.670652" />
+                            <point x="0.423564" y="0.846195" />
+                            <point x="0.0984047" y="0.658152" />
+                            <point x="0.00124533" y="0.382609" />
+                            <point x="0.0845753" y="0.143478" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="sprite_menu_inicial" sid="388425211913437">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="384726278619075" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.50625" original-source="D:\Google Drive\Dev-U\Artes\Quiz ENA\Sem Título-8.png">
+                        <collision-poly>
+                            <point x="0.438" y="0.03125" />
+                            <point x="0.827" y="0.10625" />
+                            <point x="0.988" y="0.33125" />
+                            <point x="0.894" y="0.653125" />
+                            <point x="0.532001" y="0.825" />
+                            <point x="0.135" y="0.68125" />
+                            <point x="0.00200003" y="0.45" />
+                            <point x="0.0970001" y="0.15" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
         </object-type>
     </object-folder>
     <families />

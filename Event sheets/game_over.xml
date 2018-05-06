@@ -19,22 +19,43 @@
                     <param id="0" name="Text">text_nome_player</param>
                 </action>
                 <action id="0" name="Set text" sid="705466473856172" type="text_acertos">
-                    <param id="0" name="Text">&quot;Acertos: &quot; &amp; number_acertos</param>
-                </action>
-                <action id="0" name="Set text" sid="789939701059205" type="text_erros">
-                    <param id="0" name="Text">&quot;Erros: &quot; &amp; (number_questao_atual - number_acertos )</param>
+                    <param id="0" name="Text">number_acertos &amp; &quot;/&quot; &amp; number_questao_atual-1</param>
                 </action>
                 <action id="0" name="Set text" sid="108695399068198" type="text_pontos">
-                    <param id="0" name="Text">&quot;Pontos: &quot; &amp; number_pontuacao</param>
+                    <param id="0" name="Text">&quot;Pontuação: &quot; &amp; number_pontuacao</param>
                 </action>
                 <action id="0" name="Set text" sid="806946218358308" type="text_classificacao">
-                    <param id="0" name="Text">&quot;Classificação: #&quot; &amp; (array_informacao_jogadores.IndexOf(number_pontuacao)+1)</param>
+                    <param id="0" name="Text">&quot;#&quot; &amp; (array_informacao_jogadores.IndexOf(number_pontuacao)+1) &amp; &quot; Colocado&quot;</param>
+                </action>
+                <action id="-15" name="Set visible" sid="390405528547875" type="sprite_medalha">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="5" name="Set frame" sid="964764790188038" type="sprite_medalha">
+                    <param id="0" name="Frame number">array_informacao_jogadores.IndexOf(number_pontuacao)</param>
                 </action>
             </actions>
+            <sub-events>
+                <event-block sid="262458158400914">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="592930173093852" type="System">
+                            <param id="0" name="First value">array_informacao_jogadores.IndexOf(number_pontuacao)+1</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Second value">3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="156203938710028" type="sprite_medalha">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
         <event-block sid="164842474813776">
             <conditions>
-                <condition id="0" name="On clicked" sid="479306108302953" type="button_voltar_menu" />
+                <condition id="3" name="On touched object" sid="479306108302953" type="Touch">
+                    <param id="0" name="Object">sprite_menu_inicial</param>
+                </condition>
             </conditions>
             <actions>
                 <action id="-2" name="Go to layout" sid="496147536790068" type="System">
@@ -54,7 +75,9 @@
         </event-block>
         <event-block sid="881335845521078">
             <conditions>
-                <condition id="0" name="On clicked" sid="465609735892664" type="button_reiniciar_jogo" />
+                <condition id="3" name="On touched object" sid="465609735892664" type="Touch">
+                    <param id="0" name="Object">sprite_jogar_novamente</param>
+                </condition>
             </conditions>
             <actions>
                 <action id="9" name="Delete" sid="341293211223790" type="array_informacao_jogadores">
