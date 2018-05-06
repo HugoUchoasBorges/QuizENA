@@ -42,6 +42,10 @@
                     <param id="0" name="Property name">&quot;vertical-align&quot;</param>
                     <param id="1" name="Value">&quot;middle&quot;</param>
                 </action>
+                <action id="-9" name="Set value" sid="393136614143801" type="System">
+                    <param id="0" name="Variable">number_maior_pontuacao</param>
+                    <param id="1" name="Value">0</param>
+                </action>
             </actions>
             <sub-events>
                 <event-block any="1" sid="307590630148742">

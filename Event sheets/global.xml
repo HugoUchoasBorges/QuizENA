@@ -14,6 +14,7 @@
         <variable comment="GUarda a quantidade de questões no banco " constant="0" name="number_quantidade_total_questoes" sid="806636620557155" static="0" type="number">0</variable>
         <variable comment="Guarda o número da questão atual" constant="0" name="number_questao_atual" sid="764372682975770" static="0" type="number">1</variable>
         <variable comment="Guarda a pontuação do player atual" constant="0" name="number_pontuacao" sid="864645461314145" static="0" type="number">0</variable>
+        <variable comment="Guarda a pontuação do player atual" constant="0" name="number_maior_pontuacao" sid="456559890533304" static="0" type="number">0</variable>
         <variable comment="Guarda a quantidade de partidas completadas" constant="0" name="number_quantidade_partidas" sid="278528031398075" static="0" type="number">0</variable>
         <variable comment="Guarda a resposta da pergunta atual" constant="0" name="text_resposta_atual" sid="293674312418239" static="0" type="text"></variable>
         <variable comment="Guarda um número aleatório" constant="0" name="number_valor_aleatorio" sid="929924624816861" static="0" type="number">0</variable>
@@ -951,25 +952,46 @@
                     <param id="0" name="Name">&quot;fim_de_jogo&quot;</param>
                 </condition>
             </conditions>
-            <actions>
-                <action id="5" name="Push" sid="484365911875881" type="array_informacao_jogadores">
-                    <param id="0" name="Where">1</param>
-                    <param id="1" name="Value">number_pontuacao</param>
-                    <param id="2" name="Axis">0</param>
-                </action>
-                <action id="3" name="Set at XY" sid="443879162259631" type="array_informacao_jogadores">
-                    <param id="0" name="X">0</param>
-                    <param id="1" name="Y">1</param>
-                    <param id="2" name="Value">text_nome_player</param>
-                </action>
-                <action id="-10" name="Add to" sid="301887264504621" type="System">
-                    <param id="0" name="Variable">number_quantidade_partidas</param>
-                    <param id="1" name="Value">1</param>
-                </action>
-                <action id="-2" name="Go to layout" sid="224826594216362" type="System">
-                    <param id="0" name="Layout">GameOver</param>
-                </action>
-            </actions>
+            <actions />
+            <sub-events>
+                <event-block sid="826508187679467">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="495365058296383" type="System">
+                            <param id="0" name="Variable">number_pontuacao</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">number_maior_pontuacao</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="663130724134717" type="System">
+                            <param id="0" name="Variable">number_maior_pontuacao</param>
+                            <param id="1" name="Value">number_pontuacao</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="126697479921097">
+                    <conditions />
+                    <actions>
+                        <action id="5" name="Push" sid="484365911875881" type="array_informacao_jogadores">
+                            <param id="0" name="Where">1</param>
+                            <param id="1" name="Value">number_maior_pontuacao</param>
+                            <param id="2" name="Axis">0</param>
+                        </action>
+                        <action id="3" name="Set at XY" sid="443879162259631" type="array_informacao_jogadores">
+                            <param id="0" name="X">0</param>
+                            <param id="1" name="Y">1</param>
+                            <param id="2" name="Value">text_nome_player</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="301887264504621" type="System">
+                            <param id="0" name="Variable">number_quantidade_partidas</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="224826594216362" type="System">
+                            <param id="0" name="Layout">GameOver</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
     </events>
 </c2eventsheet>
