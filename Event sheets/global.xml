@@ -20,8 +20,6 @@
         <variable comment="Guarda a altura de uma linha escrita para as alternativas" constant="0" name="number_altura_linha" sid="996724825820618" static="0" type="number">55</variable>
         <variable comment="Guarda a quantidade de questões no banco na rodada" constant="0" name="number_quantidade_questoes_rodada" sid="548830552442516" static="0" type="number">0</variable>
         <variable comment="Guarda a quantidade de questões fáceis" constant="0" name="number_quantidade_questoes_faceis" sid="923339058335075" static="0" type="number">0</variable>
-        <variable comment="Guarda a quantidade de questões médias" constant="0" name="number_quantidade_questoes_medias" sid="393572646841406" static="0" type="number">0</variable>
-        <variable comment="Guarda a quantidade de questões difíceis" constant="0" name="number_quantidade_questoes_dificeis" sid="586189262229897" static="0" type="number">0</variable>
         <variable comment="Guarda a um numero de questão aleatória" constant="0" name="number_questao_aleatoria" sid="849656083502021" static="0" type="number">0</variable>
         <variable comment="Variável para permitir ou não o clique nas alternativas" constant="0" name="number_permite_clique" sid="459527247110567" static="0" type="number">1</variable>
         <comment>Aqui serão preenchidos os elementos na tela com as questões do arquivo lido</comment>
@@ -35,6 +33,18 @@
                 <action id="-9" name="Set value" sid="279665256908396" type="System">
                     <param id="0" name="Variable">number_valor_aleatorio</param>
                     <param id="1" name="Value">round(random(0, ( array_questoes.Width -1)))</param>
+                </action>
+                <action id="-15" name="Set visible" sid="703397356341314" type="text_tempo_extra">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="831067937503252" type="text_ponto_extra">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="5" name="Set frame" sid="559862448718029" type="sprite_box_pontos">
+                    <param id="0" name="Frame number">0</param>
+                </action>
+                <action id="5" name="Set frame" sid="296187800051182" type="sprite_box_tempo">
+                    <param id="0" name="Frame number">0</param>
                 </action>
             </actions>
             <sub-events>
@@ -323,12 +333,7 @@
                             <param id="2" name="Second value">2</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="-11" name="Subtract from" sid="225660755467064" type="System">
-                            <param id="0" name="Variable">number_quantidade_questoes_medias</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                    </actions>
+                    <actions />
                 </event-block>
                 <event-block sid="393753671040109">
                     <conditions>
@@ -338,12 +343,7 @@
                             <param id="2" name="Second value">3</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="-11" name="Subtract from" sid="835737740486472" type="System">
-                            <param id="0" name="Variable">number_quantidade_questoes_dificeis</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                    </actions>
+                    <actions />
                 </event-block>
             </sub-events>
         </event-block>
@@ -508,6 +508,18 @@
                                     <param id="0" name="Instance variable">number_segundo</param>
                                     <param id="1" name="Value">8</param>
                                 </action>
+                                <action id="0" name="Set text" sid="326827680796856" type="text_tempo_extra">
+                                    <param id="0" name="Text">&quot;+8&quot;</param>
+                                </action>
+                                <action id="4" name="Set font color" sid="512342429290209" type="text_tempo_extra">
+                                    <param id="0" name="Color">rgb(0, 255, 0)</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="806612301334228" type="text_tempo_extra">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="627064948095027" type="sprite_box_tempo">
+                                    <param id="0" name="Frame number">1</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="609890258255141">
@@ -526,6 +538,18 @@
                                 <action id="0" name="Set text" sid="770103564549260" type="text_pontuacao">
                                     <param id="0" name="Text">number_pontuacao</param>
                                 </action>
+                                <action id="0" name="Set text" sid="494137122972601" type="text_ponto_extra">
+                                    <param id="0" name="Text">&quot;+&quot; &amp; number_pontuacao</param>
+                                </action>
+                                <action id="4" name="Set font color" sid="792480593013164" type="text_ponto_extra">
+                                    <param id="0" name="Color">rgb(0, 255, 0)</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="793501891931795" type="text_ponto_extra">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="207576699690793" type="sprite_box_pontos">
+                                    <param id="0" name="Frame number">1</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="521997065739761">
@@ -540,6 +564,12 @@
                                 <action id="-10" name="Add to" sid="825654437960446" type="System">
                                     <param id="0" name="Variable">number_mutiplicador</param>
                                     <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="0" name="Set text" sid="553262262786338" type="text_multiplicador">
+                                    <param id="0" name="Text">&quot;x&quot; &amp; number_mutiplicador</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="507723262682508" type="text_multiplicador">
+                                    <param id="0" name="Visibility">1</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -568,6 +598,9 @@
                             <param id="0" name="Variable">number_mutiplicador</param>
                             <param id="1" name="Value">1</param>
                         </action>
+                        <action id="-15" name="Set visible" sid="380161036156012" type="text_multiplicador">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
                     </actions>
                     <sub-events>
                         <event-block sid="667424520123326">
@@ -582,6 +615,18 @@
                                 <action id="-12" name="Subtract from" sid="824521720190638" type="text_tempo">
                                     <param id="0" name="Instance variable">number_segundo</param>
                                     <param id="1" name="Value">6</param>
+                                </action>
+                                <action id="0" name="Set text" sid="833877374971713" type="text_tempo_extra">
+                                    <param id="0" name="Text">&quot;-6&quot;</param>
+                                </action>
+                                <action id="4" name="Set font color" sid="571090156282167" type="text_tempo_extra">
+                                    <param id="0" name="Color">rgb(255, 0, 0)</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="925317764368365" type="text_tempo_extra">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="786150339292365" type="sprite_box_tempo">
+                                    <param id="0" name="Frame number">2</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -604,6 +649,30 @@
                                 </action>
                                 <action id="0" name="Set text" sid="473453248947578" type="text_pontuacao">
                                     <param id="0" name="Text">number_pontuacao</param>
+                                </action>
+                                <action id="0" name="Set text" sid="989682924114730" type="text_tempo_extra">
+                                    <param id="0" name="Text">&quot;-&quot; &amp; round(number_pontuacao/2)</param>
+                                </action>
+                                <action id="4" name="Set font color" sid="662401306778962" type="text_tempo_extra">
+                                    <param id="0" name="Color">rgb(255, 0, 0)</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="623159432615941" type="text_tempo_extra">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="249787671201063" type="sprite_box_tempo">
+                                    <param id="0" name="Frame number">2</param>
+                                </action>
+                                <action id="0" name="Set text" sid="973969971321088" type="text_tempo_extra">
+                                    <param id="0" name="Text">&quot;-10&quot;</param>
+                                </action>
+                                <action id="4" name="Set font color" sid="750834395233394" type="text_tempo_extra">
+                                    <param id="0" name="Color">rgb(255, 0, 0)</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="729345986806784" type="text_tempo_extra">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="909106596804229" type="sprite_box_tempo">
+                                    <param id="0" name="Frame number">2</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -802,12 +871,7 @@
                                     <param id="2" name="Second value">2</param>
                                 </condition>
                             </conditions>
-                            <actions>
-                                <action id="-10" name="Add to" sid="139397247788080" type="System">
-                                    <param id="0" name="Variable">number_quantidade_questoes_medias</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                            </actions>
+                            <actions />
                         </event-block>
                         <event-block sid="970736835324060">
                             <conditions>
@@ -817,12 +881,7 @@
                                     <param id="2" name="Second value">3</param>
                                 </condition>
                             </conditions>
-                            <actions>
-                                <action id="-10" name="Add to" sid="713790963700808" type="System">
-                                    <param id="0" name="Variable">number_quantidade_questoes_dificeis</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                            </actions>
+                            <actions />
                         </event-block>
                         <event-block sid="427455481510037">
                             <conditions />
@@ -903,14 +962,6 @@
                         </action>
                         <action id="-9" name="Set value" sid="672989278726932" type="System">
                             <param id="0" name="Variable">number_quantidade_questoes_faceis</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="114227597072399" type="System">
-                            <param id="0" name="Variable">number_quantidade_questoes_medias</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="775029240094257" type="System">
-                            <param id="0" name="Variable">number_quantidade_questoes_dificeis</param>
                             <param id="1" name="Value">0</param>
                         </action>
                         <action id="-9" name="Set value" sid="411370408953636" type="System">

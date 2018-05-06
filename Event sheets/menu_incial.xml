@@ -166,5 +166,29 @@
                 </action>
             </actions>
         </event-block>
+        <event-block any="1" sid="170497575371516">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="674493587785881" type="Mouse">
+                    <param id="0" name="Object">sprite_balao</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="9" name="Set scale" sid="762470177830480" type="sprite_balao">
+                    <param id="0" name="Scale">1.1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block any="1" sid="539634208726970">
+            <conditions>
+                <condition id="7" inverted="1" name="Cursor is over object" sid="564237476261664" type="Mouse">
+                    <param id="0" name="Object">sprite_balao</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="9" name="Set scale" sid="966350397447007" type="sprite_balao">
+                    <param id="0" name="Scale">1</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>

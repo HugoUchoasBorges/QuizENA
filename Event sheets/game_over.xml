@@ -93,5 +93,53 @@
                 </action>
             </actions>
         </event-block>
+        <event-block any="1" sid="683411330828574">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="537851613001174" type="Mouse">
+                    <param id="0" name="Object">sprite_jogar_novamente</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="9" name="Set scale" sid="904771034547663" type="sprite_jogar_novamente">
+                    <param id="0" name="Scale">1.1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block any="1" sid="118918538417357">
+            <conditions>
+                <condition id="7" inverted="1" name="Cursor is over object" sid="807985327349218" type="Mouse">
+                    <param id="0" name="Object">sprite_jogar_novamente</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="9" name="Set scale" sid="476177255278879" type="sprite_jogar_novamente">
+                    <param id="0" name="Scale">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block any="1" sid="417953533296861">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="286051376505624" type="Mouse">
+                    <param id="0" name="Object">sprite_menu_inicial</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="9" name="Set scale" sid="151268025442546" type="sprite_menu_inicial">
+                    <param id="0" name="Scale">1.1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block any="1" sid="786660232128849">
+            <conditions>
+                <condition id="7" inverted="1" name="Cursor is over object" sid="866518834340184" type="Mouse">
+                    <param id="0" name="Object">sprite_menu_inicial</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="9" name="Set scale" sid="683283598709201" type="sprite_menu_inicial">
+                    <param id="0" name="Scale">1</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>

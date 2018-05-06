@@ -117,6 +117,60 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="text_ponto_extra" uid="38">
+                    <properties>
+                        <text>+ 8</text>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <font>Cooper Black,-44,400,0</font>
+                        <color>0,255,0</color>
+                        <horizontal-alignment>Right</horizontal-alignment>
+                        <vertical-alignment>Top</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>985</x>
+                        <y>8</y>
+                        <z>0</z>
+                        <width>137</width>
+                        <height>54</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="text_multiplicador" uid="39">
+                    <properties>
+                        <text>x1</text>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <font>Arial Rounded MT Bold,-44,400,0</font>
+                        <color>255,255,0</color>
+                        <horizontal-alignment>Right</horizontal-alignment>
+                        <vertical-alignment>Top</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1131</x>
+                        <y>658</y>
+                        <z>0</z>
+                        <width>137</width>
+                        <height>54</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
@@ -147,7 +201,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>653</x>
-                        <y>223</y>
+                        <y>222.999969482</y>
                         <z>0</z>
                         <width>1235</width>
                         <height>144</height>
@@ -246,7 +300,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="sprite_box_geral" uid="50">
+                <instance type="sprite_box_tempo" uid="29">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -256,19 +310,19 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>640</x>
-                        <y>37</y>
+                        <x>627.326843262</x>
+                        <y>66.857147217</y>
                         <z>0</z>
-                        <width>183</width>
-                        <height>72</height>
+                        <width>150</width>
+                        <height>78</height>
                         <depth>0</depth>
-                        <hotspotX>0.501385033</hotspotX>
-                        <hotspotY>0.505494535</hotspotY>
+                        <hotspotX>0.415512472</hotspotX>
+                        <hotspotY>0.857142866</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="sprite_box_geral" uid="51">
+                <instance type="sprite_box_pontos" uid="36">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -286,6 +340,33 @@
                         <depth>0</depth>
                         <hotspotX>0.501385033</hotspotX>
                         <hotspotY>0.505494535</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="text_tempo_extra" uid="37">
+                    <properties>
+                        <text>+ 8</text>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <font>Cooper Black,-44,400,0</font>
+                        <color>0,255,0</color>
+                        <horizontal-alignment>Left</horizontal-alignment>
+                        <vertical-alignment>Top</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>717</x>
+                        <y>11</y>
+                        <z>0</z>
+                        <width>163</width>
+                        <height>54</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>

@@ -15,6 +15,7 @@
         <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Button" version="1">Button</plugin>
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
+        <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="TextBox" version="1">Text box</plugin>
@@ -498,6 +499,38 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="sprite_box_tempo" sid="293192962642415">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="3" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="119973726654906" speed="0">
+                    <frame duration="1" hotspotX="0.415512" hotspotY="0.857143" />
+                    <frame duration="1" hotspotX="0.415512" hotspotY="0.857143" />
+                    <frame duration="1" hotspotX="0.415512" hotspotY="0.857143" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="sprite_box_pontos" sid="636393947659107">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="3" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="452020560749188" speed="0">
+                    <frame duration="1" hotspotX="0.501385" hotspotY="0.505495" />
+                    <frame duration="1" hotspotX="0.501385" hotspotY="0.505495" />
+                    <frame duration="1" hotspotX="0.501385" hotspotY="0.505495" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="text_tempo_extra" sid="843479112883129">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="text_ponto_extra" sid="604915131908431">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="text_multiplicador" sid="605259709839369">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Mouse" sid="756395832197353">
+            <plugin id="Mouse" />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
@@ -533,6 +566,7 @@
                 <roll-off-factor>1</roll-off-factor>
             </properties>
         </global-instance>
+        <global-instance type="Mouse" uid="40" />
     </global-instances>
     <sounds-folder>
         <file name="Acerto1.m4a" />
